@@ -55,6 +55,9 @@ ENV PATH="${BISHENG_HOME}/bin:${HOME}/.cargo/bin:${PATH}"
 ENV LLVM_BIN="${BISHENG_HOME}/bin"
 ENV LD_LIBRARY_PATH="${BISHENG_HOME}/lib:${BISHENG_HOME}/lib/aarch64-unknown-linux-gnu:${LD_LIBRARY_PATH}"
 
+# 在这里添加安装 vim 的命令
+RUN apt-get update -y && apt-get install -y vim && \
+    rm -rf /var/lib/apt/lists/*
 
 # 设置默认命令，当容器启动时执行
 WORKDIR /app/compiler

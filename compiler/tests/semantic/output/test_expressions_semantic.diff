@@ -1,0 +1,16 @@
+2c2
+<     22 |     result = c + d;  // c和d未定义
+---
+>    22 |     result = c + d;  // c和d未定义
+5c5
+<     22 |     result = c + d;  // c和d未定义
+---
+>    22 |     result = c + d;  // c和d未定义
+8c8
+<     25 |     undefined_var = a + b;
+---
+>    25 |     undefined_var = a + b;
+11c11
+<     28 |     result = a + undefined_var2;
+---
+>    28 |     result = a + undefined_var2;

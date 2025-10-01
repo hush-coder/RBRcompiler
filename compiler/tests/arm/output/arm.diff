@@ -1,0 +1,48 @@
+--- /app/compiler/tests/arm/output/bisheng_arm.s	2025-10-01 14:30:47.460582300 +0000
++++ /app/compiler/tests/arm/output/RBF_arm.s	2025-10-01 14:30:46.684936900 +0000
+@@ -1,9 +1,9 @@
+ 	.text
+ 	.file	"test_simple.c"
+-	.globl	add                             // -- Begin function add
++	.globl	add					// -- Begin function add
+ 	.p2align	2
+ 	.type	add,@function
+-add:                                    // @add
++add:								// @add
+ 	.cfi_startproc
+ // %bb.0:
+ 	sub	sp, sp, #16
+@@ -20,10 +20,11 @@
+ 	.size	add, .Lfunc_end0-add
+ 	.cfi_endproc
+                                         // -- End function
+-	.globl	main                            // -- Begin function main
++
++	.globl	main					// -- Begin function main
+ 	.p2align	2
+ 	.type	main,@function
+-main:                                   // @main
++main:								// @main
+ 	.cfi_startproc
+ // %bb.0:
+ 	sub	sp, sp, #32
+@@ -34,9 +35,9 @@
+ 	.cfi_offset w30, -8
+ 	.cfi_offset w29, -16
+ 	stur	wzr, [x29, #-4]
+-	mov	w8, #42                         // =0x2a
++	mov	w8, #42					// =0x2a
+ 	str	w8, [sp, #8]
+-	mov	w8, #10                         // =0xa
++	mov	w8, #10					// =0xa
+ 	str	w8, [sp, #4]
+ 	ldr	w0, [sp, #8]
+ 	ldr	w1, [sp, #4]
+@@ -54,6 +55,7 @@
+ 	.size	main, .Lfunc_end1-main
+ 	.cfi_endproc
+                                         // -- End function
++
+ 	.ident	"BiSheng Enterprise 4.2.0.2.B002 clang version 17.0.6 (2261d9fde4e0)"
+ 	.section	".note.GNU-stack","",@progbits
+ 	.addrsig

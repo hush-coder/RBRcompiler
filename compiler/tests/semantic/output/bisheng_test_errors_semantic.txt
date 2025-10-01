@@ -1,0 +1,26 @@
+test_errors.c:10:5: error: use of undeclared identifier 'z'
+   10 |     z = x + y;
+      |     ^
+test_errors.c:13:18: error: call to undeclared function 'undefined_func'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   13 |     int result = undefined_func(x, y);
+      |                  ^
+test_errors.c:16:9: error: redefinition of 'x'
+   16 |     int x = 20;  // 重复定义x
+      |         ^
+test_errors.c:6:9: note: previous definition is here
+    6 |     int x = 10;
+      |         ^
+test_errors.c:19:24: error: too few arguments to function call, expected 2, have 1
+   19 |     int result2 = add(x);  // 缺少一个参数
+      |                   ~~~  ^
+test_errors.c:1:5: note: 'add' declared here
+    1 | int add(int a, int b) {
+      |     ^   ~~~~~~~~~~~~
+test_errors.c:22:23: error: use of undeclared identifier 'undefined_var'; did you mean 'undefined_func'?
+   22 |     int result3 = add(undefined_var, y);
+      |                       ^~~~~~~~~~~~~
+      |                       undefined_func
+test_errors.c:13:18: note: 'undefined_func' declared here
+   13 |     int result = undefined_func(x, y);
+      |                  ^
+5 errors generated.

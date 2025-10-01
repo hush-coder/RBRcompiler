@@ -1,0 +1,24 @@
+1,6c1,12
+< test_functions.c:1:4: error: redefinition of 'add'
+<     1 | int add(int a, int b);
+<       |    ^
+< test_functions.c:1:4: error: redefinition of 'add'
+<     1 | int add(int a, int b);
+<       |    ^
+---
+> test_functions.c:7:5: error: redefinition of 'add'
+>     7 | int add(int a, int b) {
+>       |     ^
+> test_functions.c:2:5: note: previous definition is here
+>     2 | int add(int a, int b) {
+>       |     ^
+> test_functions.c:13:5: error: conflicting types for 'multiply'
+>    13 | int multiply(int a, int b) {  // 参数数量不匹配
+>       |     ^
+> test_functions.c:12:5: note: previous declaration is here
+>    12 | int multiply(int a, int b, int c);
+>       |     ^
+8c14
+<     24 |     int result3 = undefined_func(1, 2);
+---
+>    24 |     int result3 = undefined_func(1, 2);

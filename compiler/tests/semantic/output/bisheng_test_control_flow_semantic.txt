@@ -1,0 +1,13 @@
+test_control_flow.c:21:9: error: use of undeclared identifier 'z'
+   21 |     if (z > 0) {  // z未定义
+      |         ^
+test_control_flow.c:26:12: error: use of undeclared identifier 'undefined_var'
+   26 |     while (undefined_var > 0) {  // undefined_var未定义
+      |            ^
+test_control_flow.c:31:21: error: use of undeclared identifier 'k'
+   31 |     for (int j = 0; k < 5; j = j + 1) {  // k未定义
+      |                     ^
+test_control_flow.c:37:9: error: use of undeclared identifier 'undefined_var2'
+   37 |         undefined_var2 = 10;  // 在if块中使用未定义变量
+      |         ^
+4 errors generated.

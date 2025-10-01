@@ -1,0 +1,13 @@
+test_expressions.c:22:14: error: use of undeclared identifier 'c'
+    22 |     result = c + d;  // c和d未定义
+      |              ^
+test_expressions.c:22:18: error: use of undeclared identifier 'd'
+    22 |     result = c + d;  // c和d未定义
+      |                  ^
+test_expressions.c:25:5: error: use of undeclared identifier 'undefined_var'
+    25 |     undefined_var = a + b;
+      |     ^
+test_expressions.c:28:18: error: use of undeclared identifier 'undefined_var2'
+    28 |     result = a + undefined_var2;
+      |                  ^
+4 errors generated.

@@ -1,0 +1,38 @@
+2c2
+<     10 |     z = x + y;
+---
+>    10 |     z = x + y;
+5c5
+<     13 |     int result = undefined_func(x, y);
+---
+>    13 |     int result = undefined_func(x, y);
+7c7,10
+< test_errors.c:6:8: error: redefinition of 'x'
+---
+> test_errors.c:16:9: error: redefinition of 'x'
+>    16 |     int x = 20;  // 重复定义x
+>       |         ^
+> test_errors.c:6:9: note: previous definition is here
+9,10c12,16
+<       |        ^
+< test_errors.c:1:8: error: too few arguments to function call, expected 2, have 1
+---
+>       |         ^
+> test_errors.c:19:24: error: too few arguments to function call, expected 2, have 1
+>    19 |     int result2 = add(x);  // 缺少一个参数
+>       |                   ~~~  ^
+> test_errors.c:1:5: note: 'add' declared here
+12,15c18,25
+<       |        ^
+< test_errors.c:22:23: error: use of undeclared identifier 'undefined_var'
+<     22 |     int result3 = add(undefined_var, y);
+<       |                       ^
+---
+>       |     ^   ~~~~~~~~~~~~
+> test_errors.c:22:23: error: use of undeclared identifier 'undefined_var'; did you mean 'undefined_func'?
+>    22 |     int result3 = add(undefined_var, y);
+>       |                       ^~~~~~~~~~~~~
+>       |                       undefined_func
+> test_errors.c:13:18: note: 'undefined_func' declared here
+>    13 |     int result = undefined_func(x, y);
+>       |                  ^

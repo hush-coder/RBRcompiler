@@ -1,5 +1,6 @@
 
 
+
 # RBRcompiler
 
 ---
@@ -17,7 +18,7 @@
    - 从终端进入 `RBRcompiler` 文件夹。
    - 输入以下命令构建镜像：
      ```bash
-     docker build --platform linux/arm64 -t my-compiler-app-2.0 .
+     docker build --platform linux/arm64 -t my-compiler-app-3.0 .
      ```
    - 构建完成后，输入以下命令查看现存的镜像：
      ```bash
@@ -30,7 +31,7 @@
 
 - 输入以下命令运行容器：
   ```bash
-  docker run -it my-compiler-app-2.0:latest /bin/bash
+  docker run -it my-compiler-app-3.0:latest /bin/bash
   ```
 
 ### 2. 进入脚本文件目录
@@ -56,5 +57,18 @@
   ```
 - 最后，实验的结果会显示在终端中。
 
+### 4. 实验 2（AST 生成）
+
+类似实验 1，按顺序运行如下命令：
+
+```bash
+cd tests/parser
+dos2unix ./run_all.sh
+./run_all.sh
+```
+
+你就会在 `output` 目录下看到两个生成的文件。
+
 ---
+```
 

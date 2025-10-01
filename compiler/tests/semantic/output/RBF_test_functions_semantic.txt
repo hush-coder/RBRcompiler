@@ -1,0 +1,10 @@
+test_functions.c:1:4: error: redefinition of 'add'
+    1 | int add(int a, int b);
+      |    ^
+test_functions.c:1:4: error: redefinition of 'add'
+    1 | int add(int a, int b);
+      |    ^
+test_functions.c:24:19: error: call to undeclared function 'undefined_func'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    24 |     int result3 = undefined_func(1, 2);
+      |                   ^
+3 errors generated.

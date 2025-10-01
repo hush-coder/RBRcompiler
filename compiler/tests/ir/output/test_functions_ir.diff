@@ -1,0 +1,14 @@
+--- /app/compiler/tests/ir/output/bisheng_test_functions_ir.txt	2025-10-01 04:08:55.016196000 +0000
++++ /app/compiler/tests/ir/output/RBF_test_functions_ir.txt	2025-10-01 04:08:54.545604600 +0000
+@@ -6,9 +6,10 @@
+ ; Function Attrs: noinline nounwind optnone uwtable
+ define dso_local i32 @add(i32 noundef %0, i32 noundef %1) #0 {
+   %3 = alloca i32, align 4
+-  %4 = alloca i32, align 4
+   store i32 %0, ptr %3, align 4
++  %4 = alloca i32, align 4
+   store i32 %1, ptr %4, align 4
++  store i32 0, ptr %1, align 4
+   %5 = load i32, ptr %3, align 4
+   %6 = load i32, ptr %4, align 4
+   %7 = add nsw i32 %5, %6

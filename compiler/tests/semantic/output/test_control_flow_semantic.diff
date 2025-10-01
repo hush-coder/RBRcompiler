@@ -1,0 +1,18 @@
+2c2
+<     21 |     if (z > 0) {  // z未定义
+---
+>    21 |     if (z > 0) {  // z未定义
+5c5
+<     26 |     while (undefined_var > 0) {  // undefined_var未定义
+---
+>    26 |     while (undefined_var > 0) {  // undefined_var未定义
+7,8c7,8
+< test_control_flow.c:31:21: error: use of undeclared identifier 'k'; did you mean 'j'?
+<     31 |     for (int j = 0; k < 5; j = j + 1) {  // k未定义
+---
+> test_control_flow.c:31:21: error: use of undeclared identifier 'k'
+>    31 |     for (int j = 0; k < 5; j = j + 1) {  // k未定义
+11c11
+<     37 |         undefined_var2 = 10;  // 在if块中使用未定义变量
+---
+>    37 |         undefined_var2 = 10;  // 在if块中使用未定义变量
