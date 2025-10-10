@@ -1,27 +1,27 @@
-int 'int'	 [StartOfLine]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:1:1>
-identifier 'main'	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:1:5>
-l_paren '('		Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:1:9>
-r_paren ')'		Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:1:10>
-l_brace '{'	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:1:12>
-int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:2:5>
-identifier 'x'	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:2:9>
-equal '='	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:2:11>
-numeric_constant '42'	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:2:13>
-semi ';'		Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:2:15>
-int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:3:5>
-identifier 'y'	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:3:9>
-equal '='	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:3:11>
-numeric_constant '10'	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:3:13>
-semi ';'		Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:3:15>
-int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:4:5>
-identifier 'result'	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:4:9>
-equal '='	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:4:16>
-identifier 'x'	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:4:18>
-plus '+'	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:4:20>
-identifier 'y'	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:4:22>
-semi ';'		Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:4:23>
-return 'return'	 [StartOfLine] [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:5:5>
-identifier 'result'	 [LeadingSpace]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:5:12>
-semi ';'		Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:5:18>
-r_brace '}'	 [StartOfLine]	Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:6:1>
-eof ''		Loc=</workspace/RBRcompiler/compiler/tests/lexer/test_simple.c:6:3>
+int 'int'	 [StartOfLine]	Loc=</app/compiler/tests/lexer/test_simple.c:1:1>
+identifier 'main'	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:1:5>
+l_paren '('		Loc=</app/compiler/tests/lexer/test_simple.c:1:9>
+r_paren ')'		Loc=</app/compiler/tests/lexer/test_simple.c:1:10>
+l_brace '{'	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:1:12>
+int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:2:5>
+identifier 'x'	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:2:9>
+equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:2:11>
+numeric_constant '42'	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:2:13>
+semi ';'		Loc=</app/compiler/tests/lexer/test_simple.c:2:15>
+int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:3:5>
+identifier 'y'	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:3:9>
+equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:3:11>
+numeric_constant '10'	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:3:13>
+semi ';'		Loc=</app/compiler/tests/lexer/test_simple.c:3:15>
+int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:4:5>
+identifier 'result'	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:4:9>
+equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:4:16>
+identifier 'x'	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:4:18>
+plus '+'	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:4:20>
+identifier 'y'	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:4:22>
+semi ';'		Loc=</app/compiler/tests/lexer/test_simple.c:4:23>
+return 'return'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:5:5>
+identifier 'result'	 [LeadingSpace]	Loc=</app/compiler/tests/lexer/test_simple.c:5:12>
+semi ';'		Loc=</app/compiler/tests/lexer/test_simple.c:5:18>
+r_brace '}'	 [StartOfLine]	Loc=</app/compiler/tests/lexer/test_simple.c:6:1>
+eof ''		Loc=</app/compiler/tests/lexer/test_simple.c:6:3>

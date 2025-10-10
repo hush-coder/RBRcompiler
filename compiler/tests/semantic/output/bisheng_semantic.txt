@@ -1,0 +1,34 @@
+/app/compiler/tests/semantic/test_final.c:9:5: error: redefinition of 'test_func'
+    9 | int test_func() {
+      |     ^
+/app/compiler/tests/semantic/test_final.c:5:5: note: previous definition is here
+    5 | int test_func() {
+      |     ^
+/app/compiler/tests/semantic/test_final.c:14:13: error: use of undeclared identifier 'undefined_var'
+   14 |     int x = undefined_var;
+      |             ^
+/app/compiler/tests/semantic/test_final.c:15:9: error: incompatible pointer to integer conversion initializing 'int' with an expression of type 'char[6]' [-Wint-conversion]
+   15 |     int a = "hello";
+      |         ^   ~~~~~~~
+/app/compiler/tests/semantic/test_final.c:17:9: error: redefinition of 'y'
+   17 |     int y = 20;
+      |         ^
+/app/compiler/tests/semantic/test_final.c:16:9: note: previous definition is here
+   16 |     int y = 10;
+      |         ^
+/app/compiler/tests/semantic/test_final.c:19:20: error: too few arguments to function call, expected 2, have 1
+   19 |     int sum = add(x);
+      |               ~~~  ^
+/app/compiler/tests/semantic/test_final.c:1:5: note: 'add' declared here
+    1 | int add(int a, int b) {
+      |     ^   ~~~~~~~~~~~~
+/app/compiler/tests/semantic/test_final.c:20:21: error: incompatible pointer to integer conversion passing 'char[6]' to parameter of type 'int' [-Wint-conversion]
+   20 |     int wrong = add("hello", y);
+      |                     ^~~~~~~
+/app/compiler/tests/semantic/test_final.c:1:13: note: passing argument to parameter 'a' here
+    1 | int add(int a, int b) {
+      |             ^
+/app/compiler/tests/semantic/test_final.c:21:12: error: incompatible pointer to integer conversion returning 'char[6]' from a function with result type 'int' [-Wint-conversion]
+   21 |     return "hello";
+      |            ^~~~~~~
+7 errors generated.

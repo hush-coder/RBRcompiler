@@ -1,0 +1,38 @@
+119,136c119,136
+<   `-FunctionDecl 0x400000d23c30 </app/compiler/tests/parser/test_simple.c:1:1, line:6:1> line:1:5 main 'int ()'
+<     `-CompoundStmt 0x400000d24000 <col:12, line:6:1>
+<     | |-DeclStmt 0x400000d23dc0 <line:2:5, col:15>
+<     |   `-VarDecl 0x400000d23d38 <col:5, col:13> col:9 used x 'int' cinit
+<     |     `-IntegerLiteral 0x400000d23da0 <col:13> 'int' 42
+<     | |-DeclStmt 0x400000d23e78 <line:3:5, col:15>
+<     |   `-VarDecl 0x400000d23df0 <col:5, col:13> col:9 used y 'int' cinit
+<     |     `-IntegerLiteral 0x400000d23e58 <col:13> 'int' 10
+<     | |-DeclStmt 0x400000d23fa0 <line:4:5, col:23>
+<     |   `-VarDecl 0x400000d23ea8 <col:5, col:22> col:9 used result 'int' cinit
+<     |     `-BinaryOperator 0x400000d23f80 <col:18, col:22> 'int' '+'
+<     |     | |-ImplicitCastExpr 0x400000d23f50 <col:18> 'int' <LValueToRValue>
+<     |     |   `-DeclRefExpr 0x400000d23f10 <col:18> 'int' lvalue Var 0x400000d23d38 'x' 'int'
+<     |       `-ImplicitCastExpr 0x400000d23f50 <col:18> 'int' <LValueToRValue>
+<     |         `-DeclRefExpr 0x400000d23f30 <col:22> 'int' lvalue Var 0x400000d23df0 'y' 'int'
+<       `-ReturnStmt 0x400000d23ff0 <line:5:5, col:12>
+<         `-ImplicitCastExpr 0x400000d23f50 <col:18> 'int' <LValueToRValue>
+<           `-DeclRefExpr 0x400000d23fb8 <col:12> 'int' lvalue Var 0x400000d23ea8 'result' 'int'
+---
+> `-FunctionDecl 0x400000d23c30 </app/compiler/tests/parser/test_simple.c:1:1, line:6:1> line:1:5 main 'int ()'
+>   `-CompoundStmt 0x400000d24000 <col:12, line:6:1>
+>     |-DeclStmt 0x400000d23dc0 <line:2:5, col:15>
+>     | `-VarDecl 0x400000d23d38 <col:5, col:13> col:9 used x 'int' cinit
+>     |   `-IntegerLiteral 0x400000d23da0 <col:13> 'int' 42
+>     |-DeclStmt 0x400000d23e78 <line:3:5, col:15>
+>     | `-VarDecl 0x400000d23df0 <col:5, col:13> col:9 used y 'int' cinit
+>     |   `-IntegerLiteral 0x400000d23e58 <col:13> 'int' 10
+>     |-DeclStmt 0x400000d23fa0 <line:4:5, col:23>
+>     | `-VarDecl 0x400000d23ea8 <col:5, col:22> col:9 used result 'int' cinit
+>     |   `-BinaryOperator 0x400000d23f80 <col:18, col:22> 'int' '+'
+>     |     |-ImplicitCastExpr 0x400000d23f50 <col:18> 'int' <LValueToRValue>
+>     |     | `-DeclRefExpr 0x400000d23f10 <col:18> 'int' lvalue Var 0x400000d23d38 'x' 'int'
+>     |     `-ImplicitCastExpr 0x400000d23f68 <col:22> 'int' <LValueToRValue>
+>     |       `-DeclRefExpr 0x400000d23f30 <col:22> 'int' lvalue Var 0x400000d23df0 'y' 'int'
+>     `-ReturnStmt 0x400000d23ff0 <line:5:5, col:12>
+>       `-ImplicitCastExpr 0x400000d23fd8 <col:12> 'int' <LValueToRValue>
+>         `-DeclRefExpr 0x400000d23fb8 <col:12> 'int' lvalue Var 0x400000d23ea8 'result' 'int'

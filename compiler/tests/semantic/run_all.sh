@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# Semantic分析测试脚本
+# 参考parser/run_all.sh的格式
+
+echo "=== Semantic Analysis Tests ==="
+
+# 设置路径
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+COMPILER_DIR="$(dirname "$SCRIPT_DIR")"
+COMPILER_DIR="$(dirname "$COMPILER_DIR")"
+OUTPUT_DIR="$SCRIPT_DIR/output"
+
+# 确保输出目录存在
+mkdir -p "$OUTPUT_DIR"
+
+# 测试文件列表
+TEST_FILES=(
+    "test_simple.c"
+    "test_errors.c" 
+    "test_functions.c"
+)
+
+echo "开始运行semantic分析测试..."
+
+for test_file in "${TEST_FILES[@]}"; do
+    echo ""
+    echo "=== 测试文件: $test_file ==="
+    
+    TEST_PATH="$SCRIPT_DIR/$test_file"
+    RBF_OUTPUT="$OUTPUT_DIR/RBF_${test_file%.c}_semantic.txt"
+    BISHENG_OUTPUT="$OUTPUT_DIR/bisheng_${test_file%.c}_semantic.txt"
+    DIFF_OUTPUT="$OUTPUT_DIR/${test_file%.c}_semantic.diff"
+    
+    echo "测试文件: $TEST_PATH"
+    echo "RBF输出: $RBF_OUTPUT"
+    echo "Bisheng输出: $BISHENG_OUTPUT"
+    
+    # 运行RBF编译器
+    echo "运行RBF编译器..."
+    cd "$COMPILER_DIR"
+    RUST_LOG=error cargo run --quiet -- --emit semantic "$TEST_PATH" > "$RBF_OUTPUT" 2>/dev/null
+    
+    # 运行bisheng编译器获取semantic输出
+    echo "运行bisheng编译器..."
+    clang -fsyntax-only "$TEST_PATH" > "$BISHENG_OUTPUT" 2>&1
+    
+    # 比较输出
+    echo "比较输出..."
+    if diff -u "$BISHENG_OUTPUT" "$RBF_OUTPUT" > "$DIFF_OUTPUT"; then
+        echo "✅ $test_file - 输出完全匹配！"
+        echo "Bisheng输出:"
+        cat "$BISHENG_OUTPUT"
+        echo ""
+        echo "RBF输出:"
+        cat "$RBF_OUTPUT"
+    else
+        echo "❌ $test_file - 输出不匹配，差异如下:"
+        cat "$DIFF_OUTPUT"
+    fi
+    
+    echo "---"
+done
+
+echo ""
+echo "=== 所有测试完成 ==="
+echo "输出文件位置: $OUTPUT_DIR"

@@ -1,0 +1,7 @@
+/app/compiler/tests/semantic/test_errors.c:4:13: error: use of undeclared identifier 'undefined_var'
+    4 | int z = undefined_var;
+      |             ^
+/app/compiler/tests/semantic/test_errors.c:5:5: error: incompatible pointer to integer conversion initializing 'int' with an expression of type 'char[6]' [-Wint-conversion]
+    5 | int a = "hello";
+      |     ^   ~~~~~~~
+2 errors generated.
