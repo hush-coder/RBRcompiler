@@ -1,0 +1,150 @@
+Program(
+    [
+        FunctionDeclaration {
+            return_type: "int",
+            name: "add",
+            parameters: [
+                Parameter {
+                    type_name: "int",
+                    name: "a",
+                },
+                Parameter {
+                    type_name: "int",
+                    name: "b",
+                },
+            ],
+            body: Block(
+                [
+                    ReturnStatement(
+                        Some(
+                            BinaryExpression {
+                                operator: Add,
+                                left: Identifier(
+                                    "a",
+                                ),
+                                right: Identifier(
+                                    "b",
+                                ),
+                            },
+                        ),
+                    ),
+                ],
+            ),
+        },
+        FunctionDeclaration {
+            return_type: "int",
+            name: "main",
+            parameters: [],
+            body: Block(
+                [
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "x",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            10,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "y",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            5,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "result",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            0,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    IfStatement {
+                        condition: BinaryExpression {
+                            operator: GreaterThan,
+                            left: Identifier(
+                                "x",
+                            ),
+                            right: Identifier(
+                                "y",
+                            ),
+                        },
+                        then_branch: Block(
+                            [
+                                AssignmentExpression {
+                                    target: Identifier(
+                                        "result",
+                                    ),
+                                    value: FunctionCall {
+                                        name: "add",
+                                        arguments: [
+                                            Identifier(
+                                                "x",
+                                            ),
+                                            Identifier(
+                                                "y",
+                                            ),
+                                        ],
+                                    },
+                                },
+                            ],
+                        ),
+                        else_branch: Some(
+                            Block(
+                                [
+                                    AssignmentExpression {
+                                        target: Identifier(
+                                            "result",
+                                        ),
+                                        value: BinaryExpression {
+                                            operator: Subtract,
+                                            left: Identifier(
+                                                "x",
+                                            ),
+                                            right: Identifier(
+                                                "y",
+                                            ),
+                                        },
+                                    },
+                                ],
+                            ),
+                        ),
+                    },
+                    ReturnStatement(
+                        Some(
+                            Identifier(
+                                "result",
+                            ),
+                        ),
+                    ),
+                ],
+            ),
+        },
+    ],
+)

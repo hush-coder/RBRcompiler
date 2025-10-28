@@ -1,0 +1,23 @@
+; ModuleID = 'main'
+source_filename = "main"
+
+define i32 @main() {
+entry:
+  %a = alloca i32, align 4
+  store i32 10, ptr %a, align 4
+  %b = alloca i32, align 4
+  store i32 5, ptr %b, align 4
+  %a1 = load i32, ptr %a, align 4
+  %b2 = load i32, ptr %b, align 4
+  %gt = icmp sgt i32 %a1, %b2
+  br i1 %gt, label %then, label %else
+
+then:                                             ; preds = %entry
+  ret i32 1
+
+else:                                             ; preds = %entry
+  ret i32 0
+
+merge:                                            ; No predecessors!
+  ret i32 0
+}

@@ -29,9 +29,9 @@ cat "$TEST_FILE"
 
 echo ""
 
-# 使用Bisheng clang生成token流
+# 使用自研编译器生成token流
 echo -e "${BLUE}=== 使用自研编译器生成token流 ===${NC}"
-clang -Xclang -dump-tokens -fsyntax-only "$TEST_FILE" > "$OUTPUT_DIR/RBF_tokens.txt" 2>&1 || {
+cargo run --manifest-path "$SCRIPT_DIR/../../Cargo.toml" -- --emit tokens "$TEST_FILE" > "$OUTPUT_DIR/RBF_tokens.txt" || {
     echo "错误: 自研编译器生成token流失败"
     exit 1
 }
@@ -47,7 +47,7 @@ clang -Xclang -dump-tokens -fsyntax-only "$TEST_FILE" > "$OUTPUT_DIR/bisheng_tok
 
 echo -e "输出成功，在$OUTPUT_DIR/bisheng_tokens.txt"
 
-echo “比对成功”
+echo "比对成功"
 
 echo ""
 echo -e "${GREEN}✓ 测试完成！${NC}"

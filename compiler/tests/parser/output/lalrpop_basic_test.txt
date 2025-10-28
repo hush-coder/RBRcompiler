@@ -1,0 +1,41 @@
+🔍 验证LALR(1)语法规则运用
+==================================================
+测试1: CompUnit规则 - 程序结构
+输入: int main() {
+            return 42;
+        }
+✅ CompUnit解析成功!
+   📋 检测到 1 个函数
+   📝 函数 1: main
+
+测试2: FuncDef规则 - 函数定义
+输入: int add(int a, int b) {
+            int result = a + b;
+            return result;
+        }
+✅ FuncDef解析成功!
+   🔧 返回类型: int
+   📛 函数名: add
+   📥 参数数量: 2
+   📋 参数 1: int a
+   📋 参数 2: int b
+
+测试3: FunctionCall规则 - 函数调用
+输入: int test() {
+            int x = add(5, 3);
+            return x;
+        }
+✅ FunctionCall解析成功!
+   📋 AST类型: Discriminant(0)
+
+🎉 LALR(1)语法规则验证完成!
+💡 您的语法规则已成功转换为状态机解析器!
+📊 生成的解析器文件大小: 187,621 字节
+🔧 包含完整的语法分析状态机!
+
+📋 LALR(1)语法规则运用分析:
+   1. CompUnit → FuncDef+ (程序由函数列表组成)
+   2. FuncDef → FuncType Ident '(' FuncFParams? ')' Block
+   3. FunctionCall → Ident '(' FuncRParams? ')'
+   4. 运算符优先级: || && == != < > <= >= + - * /
+   5. 悬空else问题已通过匹配/未匹配语句模式解决

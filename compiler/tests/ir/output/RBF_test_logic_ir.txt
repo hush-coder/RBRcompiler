@@ -1,0 +1,69 @@
+; ModuleID = 'main'
+source_filename = "main"
+
+define i32 @main() {
+entry:
+  %a = alloca i32, align 4
+  store i32 10, ptr %a, align 4
+  %b = alloca i32, align 4
+  store i32 5, ptr %b, align 4
+  %c = alloca i32, align 4
+  store i32 0, ptr %c, align 4
+  %result = alloca i32, align 4
+  store i32 0, ptr %result, align 4
+  %a1 = load i32, ptr %a, align 4
+  %b2 = load i32, ptr %b, align 4
+  %and = and i32 %a1, %b2
+  %icmp_ne = icmp ne i32 %and, 0
+  br i1 %icmp_ne, label %then, label %after
+
+then:                                             ; preds = %entry
+  %result3 = load i32, ptr %result, align 4
+  %add = add i32 %result3, 1
+  store i32 %add, ptr %result, align 4
+  br label %after
+
+after:                                            ; preds = %then, %entry
+  %a4 = load i32, ptr %a, align 4
+  %c5 = load i32, ptr %c, align 4
+  %or = or i32 %a4, %c5
+  %icmp_ne6 = icmp ne i32 %or, 0
+  br i1 %icmp_ne6, label %then7, label %after8
+
+then7:                                            ; preds = %after
+  %result9 = load i32, ptr %result, align 4
+  %add10 = add i32 %result9, 1
+  store i32 %add10, ptr %result, align 4
+  br label %after8
+
+after8:                                           ; preds = %then7, %after
+  %c11 = load i32, ptr %c, align 4
+  %not = xor i32 %c11, -1
+  %icmp_ne12 = icmp ne i32 %not, 0
+  br i1 %icmp_ne12, label %then13, label %after14
+
+then13:                                           ; preds = %after8
+  %result15 = load i32, ptr %result, align 4
+  %add16 = add i32 %result15, 1
+  store i32 %add16, ptr %result, align 4
+  br label %after14
+
+after14:                                          ; preds = %then13, %after8
+  %a17 = load i32, ptr %a, align 4
+  %b18 = load i32, ptr %b, align 4
+  %gt = icmp sgt i32 %a17, %b18
+  %b19 = load i32, ptr %b, align 4
+  %gt20 = icmp sgt i32 %b19, 0
+  %and21 = and i1 %gt, %gt20
+  br i1 %and21, label %then22, label %after23
+
+then22:                                           ; preds = %after14
+  %result24 = load i32, ptr %result, align 4
+  %add25 = add i32 %result24, 1
+  store i32 %add25, ptr %result, align 4
+  br label %after23
+
+after23:                                          ; preds = %then22, %after14
+  %result26 = load i32, ptr %result, align 4
+  ret i32 %result26
+}

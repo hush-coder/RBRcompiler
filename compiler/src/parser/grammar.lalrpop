@@ -1,0 +1,326 @@
+use crate::parser::ast::{ASTNode, BinaryOperator, UnaryOperator};
+
+grammar;
+
+pub CompUnit: ASTNode = {
+    <functions: FuncDef+> => ASTNode::Program(functions)
+}
+
+FuncDef: ASTNode = {
+    <func_type: FuncType> <name: Ident> "(" <params: FuncFParams?> ")" <body: Block> => {
+        ASTNode::FunctionDeclaration {
+            return_type: func_type,
+            name,
+            parameters: params.unwrap_or_default(),
+            body: Box::new(body),
+        }
+    }
+}
+
+FuncType: String = {
+    "void" => "void".to_string(),
+    "int" => "int".to_string(),
+}
+
+// FuncFParams 仅处理一个或多个参数
+FuncFParams: Vec<ASTNode> = {
+    <first: FuncFParam> <rest: ("," FuncFParam)*> => {
+        let mut vec = vec![first];
+        vec.extend(rest.into_iter().map(|(_, p)| p));
+        vec
+    },
+}
+
+FuncFParam: ASTNode = {
+    <func_type: FuncType> <name: Ident> => {
+        ASTNode::Parameter {
+            type_name: func_type,
+            name,
+        }
+    }
+}
+
+Block: ASTNode = {
+    "{" <items: BlockItem*> "}" => ASTNode::Block(items)
+}
+
+BlockItem: ASTNode = {
+    Decl,
+    Stmt,
+}
+
+Decl: ASTNode = {
+    VarDecl,
+}
+
+// 修正 1: 统一 VarDecl 的 AST 结构
+VarDecl: ASTNode = {
+    "int" <var_defs: VarDef+> ";" => {
+        // 1. 构建包含所有声明的 MultiVarDecl 节点
+        let multi_decl_node = ASTNode::MultiVarDecl {
+            type_name: "int".to_string(), 
+            declarations: var_defs,
+        };
+        // 2. 将其封装为 DeclStmt，作为 BlockItem 中的一个语句
+        ASTNode::DeclStmt(Box::new(multi_decl_node))
+    }
+}
+
+// 修正：合并 VarDef 规则
+VarDef: ASTNode = {
+    <name: Ident> <init_part: ("=" InitVal)?> => {
+        ASTNode::VariableDeclaration {
+            type_name: "int".to_string(),
+            name,
+            initializer: init_part.map(|(_, init_val)| Box::new(init_val)),
+        }
+    }
+}
+
+InitVal: ASTNode = {
+    Exp,
+}
+
+Stmt: ASTNode = {
+    MatchedStmt,
+    UnmatchedStmt,
+}
+
+// OtherStmt: 所有非 IF 语句
+OtherStmt: ASTNode = {
+    AssignmentStatement,
+    Block,
+    ReturnStatement,
+    ExpressionStatement,
+}
+
+// MatchedStmt (已匹配语句): 必须是 OtherStmt 或一个保证有 else 的 if-else 结构
+MatchedStmt: ASTNode = {
+    OtherStmt,
+    // 规则 1: 必须有 else，并且 then 和 else 分支都是 MatchedStmt
+    "if" "(" <condition: Cond> ")" <then_stmt: MatchedStmt> "else" <else_stmt: MatchedStmt> => {
+        ASTNode::IfStatement {
+            condition: Box::new(condition),
+            then_branch: Box::new(then_stmt),
+            else_branch: Some(Box::new(else_stmt)),
+        }
+    },
+}
+
+// UnmatchedStmt (未匹配语句): 没有 else 的 if 语句，或 else 分支本身是 UnmatchedStmt
+UnmatchedStmt: ASTNode = {
+    // 规则 2: If-Then (没有 else): then 分支必须是 MatchedStmt
+    "if" "(" <condition: Cond> ")" <then_stmt: MatchedStmt> => {
+        ASTNode::IfStatement {
+            condition: Box::new(condition),
+            then_branch: Box::new(then_stmt),
+            else_branch: None,
+        }
+    },
+    // 规则 3 (重点修正): If-Else with Unmatched ELSE: then 分支现在必须是 MatchedStmt
+    "if" "(" <condition: Cond> ")" <then_stmt: MatchedStmt> "else" <else_stmt: UnmatchedStmt> => {
+        ASTNode::IfStatement {
+            condition: Box::new(condition),
+            then_branch: Box::new(then_stmt),
+            else_branch: Some(Box::new(else_stmt)),
+        }
+    },
+}
+
+AssignmentStatement: ASTNode = {
+    <lval: Lval> "=" <exp: Exp> ";" => {
+        ASTNode::AssignmentExpression {
+            target: Box::new(lval),
+            value: Box::new(exp),
+        }
+    }
+}
+
+ReturnStatement: ASTNode = {
+    "return" <exp: Exp?> ";" => {
+        ASTNode::ReturnStatement(exp.map(Box::new))
+    }
+}
+
+// 修正 2: 将空语句 (;) 解析为空的Block
+ExpressionStatement: ASTNode = {
+    <exp: Exp?> ";" => {
+        if let Some(expr) = exp {
+            ASTNode::ExpressionStatement(Box::new(expr))
+        } else {
+            ASTNode::Block(vec![]) // 空语句用空的Block表示
+        }
+    }
+}
+
+Exp: ASTNode = {
+    LOrExp,
+}
+
+Lval: ASTNode = {
+    <name: Ident> => ASTNode::Identifier(name)
+}
+
+// 修正：使用左递归，实现左结合性
+LOrExp: ASTNode = {
+    <left: LOrExp> "||" <right: LAndExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::LogicalOr,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    LAndExp,
+}
+
+LAndExp: ASTNode = {
+    <left: LAndExp> "&&" <right: EqExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::LogicalAnd,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    EqExp,
+}
+
+EqExp: ASTNode = {
+    <left: EqExp> "==" <right: RelExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::EqualEqual,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    <left: EqExp> "!=" <right: RelExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::NotEqual,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    RelExp,
+}
+
+RelExp: ASTNode = {
+    <left: RelExp> "<" <right: AddExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::LessThan,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    <left: RelExp> ">" <right: AddExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::GreaterThan,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    <left: RelExp> "<=" <right: AddExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::LessEqual,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    <left: RelExp> ">=" <right: AddExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::GreaterEqual,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    AddExp,
+}
+
+AddExp: ASTNode = {
+    <left: AddExp> "+" <right: MulExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::Add,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    <left: AddExp> "-" <right: MulExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::Subtract,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    MulExp,
+}
+
+MulExp: ASTNode = {
+    <left: MulExp> "*" <right: UnaryExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::Multiply,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    <left: MulExp> "/" <right: UnaryExp> => {
+        ASTNode::BinaryExpression {
+            operator: BinaryOperator::Divide,
+            left: Box::new(left),
+            right: Box::new(right),
+        }
+    },
+    UnaryExp,
+}
+
+// UnaryExp 保持右递归
+UnaryExp: ASTNode = {
+    "+" <operand: UnaryExp> => {
+        ASTNode::UnaryExpression {
+            operator: UnaryOperator::Plus,
+            operand: Box::new(operand),
+        }
+    },
+    "-" <operand: UnaryExp> => {
+        ASTNode::UnaryExpression {
+            operator: UnaryOperator::Minus,
+            operand: Box::new(operand),
+        }
+    },
+    "!" <operand: UnaryExp> => {
+        ASTNode::UnaryExpression {
+            operator: UnaryOperator::Not,
+            operand: Box::new(operand),
+        }
+    },
+    PrimaryExp,
+}
+
+// 修正：合并 FunctionCall 和 Ident 规则
+PrimaryExp: ASTNode = {
+    "(" <exp: Exp> ")" => exp,
+    <value: IntConst> => ASTNode::IntegerLiteral(value),
+    <name: Ident> <call_part: ("(" FuncRParams? ")")?> => {
+        match call_part {
+            Some((_, args_opt, _)) => ASTNode::FunctionCall {
+                name,
+                arguments: args_opt.unwrap_or_default(),
+            },
+            None => ASTNode::Identifier(name),
+        }
+    }
+}
+
+// 修正：处理逗号分隔的参数列表
+FuncRParams: Vec<ASTNode> = {
+    <first: Exp> <rest: ("," Exp)*> => {
+        let mut vec = vec![first];
+        vec.extend(rest.into_iter().map(|(_, e)| e));
+        vec
+    },
+}
+
+Cond: ASTNode = {
+    LOrExp,
+}
+
+// 词法分析器规则
+Ident: String = r"[a-zA-Z_][a-zA-Z0-9_]*" => <>.to_string();
+IntConst: i64 = r"[0-9]+" => <>.parse().unwrap();

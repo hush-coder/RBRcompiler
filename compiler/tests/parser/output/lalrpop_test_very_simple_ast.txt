@@ -1,0 +1,20 @@
+Program(
+    [
+        FunctionDeclaration {
+            return_type: "int",
+            name: "main",
+            parameters: [],
+            body: Block(
+                [
+                    ReturnStatement(
+                        Some(
+                            IntegerLiteral(
+                                0,
+                            ),
+                        ),
+                    ),
+                ],
+            ),
+        },
+    ],
+)

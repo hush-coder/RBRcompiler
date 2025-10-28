@@ -55,6 +55,27 @@ ENV PATH="${BISHENG_HOME}/bin:${HOME}/.cargo/bin:${PATH}"
 ENV LLVM_BIN="${BISHENG_HOME}/bin"
 ENV LD_LIBRARY_PATH="${BISHENG_HOME}/lib:${BISHENG_HOME}/lib/aarch64-unknown-linux-gnu:${LD_LIBRARY_PATH}"
 
+# 设置时区，避免交互式提示
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# 安装 LLVM 17 开发环境（给 inkwell/llvm-sys 使用）
+RUN apt-get update -y && \
+    apt-get install -y lsb-release wget software-properties-common gnupg ca-certificates && \
+    wget -O - https://apt.llvm.org/llvm.sh | bash -s -- 17 all && \
+    apt-get install -y llvm-17 llvm-17-dev clang-17 lld-17 && \
+    apt-get install -y zlib1g-dev libffi-dev libc6-dev libstdc++-10-dev && \
+    apt-get install -y libzstd-dev libtinfo-dev libxml2-dev && \
+    apt-get install -y vim && \
+    rm -rf /var/lib/apt/lists/*
+
+# 设置给 inkwell/llvm-sys 使用的 LLVM 17 环境变量
+ENV LLVM_CONFIG_PATH="/usr/bin/llvm-config-17"
+ENV LLVM_SYS_170_PREFIX="/usr/lib/llvm-17"
+
+# 验证 LLVM 17 安装
+RUN /usr/bin/llvm-config-17 --version
 
 # 设置默认命令，当容器启动时执行
 WORKDIR /app/compiler

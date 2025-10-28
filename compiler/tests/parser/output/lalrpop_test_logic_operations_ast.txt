@@ -1,0 +1,354 @@
+Program(
+    [
+        FunctionDeclaration {
+            return_type: "int",
+            name: "main",
+            parameters: [],
+            body: Block(
+                [
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "a",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            10,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "b",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            5,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "c",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            15,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "result",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            0,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    IfStatement {
+                        condition: BinaryExpression {
+                            operator: LogicalAnd,
+                            left: BinaryExpression {
+                                operator: GreaterThan,
+                                left: Identifier(
+                                    "a",
+                                ),
+                                right: Identifier(
+                                    "b",
+                                ),
+                            },
+                            right: BinaryExpression {
+                                operator: LessThan,
+                                left: Identifier(
+                                    "b",
+                                ),
+                                right: Identifier(
+                                    "c",
+                                ),
+                            },
+                        },
+                        then_branch: Block(
+                            [
+                                AssignmentExpression {
+                                    target: Identifier(
+                                        "result",
+                                    ),
+                                    value: IntegerLiteral(
+                                        1,
+                                    ),
+                                },
+                            ],
+                        ),
+                        else_branch: None,
+                    },
+                    IfStatement {
+                        condition: BinaryExpression {
+                            operator: LogicalOr,
+                            left: BinaryExpression {
+                                operator: LessThan,
+                                left: Identifier(
+                                    "a",
+                                ),
+                                right: Identifier(
+                                    "b",
+                                ),
+                            },
+                            right: BinaryExpression {
+                                operator: LessThan,
+                                left: Identifier(
+                                    "b",
+                                ),
+                                right: Identifier(
+                                    "c",
+                                ),
+                            },
+                        },
+                        then_branch: Block(
+                            [
+                                AssignmentExpression {
+                                    target: Identifier(
+                                        "result",
+                                    ),
+                                    value: IntegerLiteral(
+                                        2,
+                                    ),
+                                },
+                            ],
+                        ),
+                        else_branch: None,
+                    },
+                    IfStatement {
+                        condition: BinaryExpression {
+                            operator: LogicalOr,
+                            left: BinaryExpression {
+                                operator: LogicalAnd,
+                                left: BinaryExpression {
+                                    operator: GreaterThan,
+                                    left: Identifier(
+                                        "a",
+                                    ),
+                                    right: Identifier(
+                                        "b",
+                                    ),
+                                },
+                                right: BinaryExpression {
+                                    operator: LessThan,
+                                    left: Identifier(
+                                        "b",
+                                    ),
+                                    right: Identifier(
+                                        "c",
+                                    ),
+                                },
+                            },
+                            right: BinaryExpression {
+                                operator: LogicalAnd,
+                                left: BinaryExpression {
+                                    operator: EqualEqual,
+                                    left: Identifier(
+                                        "a",
+                                    ),
+                                    right: IntegerLiteral(
+                                        10,
+                                    ),
+                                },
+                                right: BinaryExpression {
+                                    operator: GreaterThan,
+                                    left: Identifier(
+                                        "c",
+                                    ),
+                                    right: IntegerLiteral(
+                                        10,
+                                    ),
+                                },
+                            },
+                        },
+                        then_branch: Block(
+                            [
+                                AssignmentExpression {
+                                    target: Identifier(
+                                        "result",
+                                    ),
+                                    value: IntegerLiteral(
+                                        3,
+                                    ),
+                                },
+                            ],
+                        ),
+                        else_branch: None,
+                    },
+                    IfStatement {
+                        condition: UnaryExpression {
+                            operator: Not,
+                            operand: BinaryExpression {
+                                operator: LessThan,
+                                left: Identifier(
+                                    "a",
+                                ),
+                                right: Identifier(
+                                    "b",
+                                ),
+                            },
+                        },
+                        then_branch: Block(
+                            [
+                                AssignmentExpression {
+                                    target: Identifier(
+                                        "result",
+                                    ),
+                                    value: IntegerLiteral(
+                                        4,
+                                    ),
+                                },
+                            ],
+                        ),
+                        else_branch: None,
+                    },
+                    IfStatement {
+                        condition: BinaryExpression {
+                            operator: LogicalAnd,
+                            left: BinaryExpression {
+                                operator: LogicalAnd,
+                                left: BinaryExpression {
+                                    operator: GreaterThan,
+                                    left: Identifier(
+                                        "a",
+                                    ),
+                                    right: IntegerLiteral(
+                                        0,
+                                    ),
+                                },
+                                right: BinaryExpression {
+                                    operator: LogicalOr,
+                                    left: BinaryExpression {
+                                        operator: GreaterThan,
+                                        left: Identifier(
+                                            "b",
+                                        ),
+                                        right: IntegerLiteral(
+                                            0,
+                                        ),
+                                    },
+                                    right: BinaryExpression {
+                                        operator: GreaterThan,
+                                        left: Identifier(
+                                            "c",
+                                        ),
+                                        right: IntegerLiteral(
+                                            0,
+                                        ),
+                                    },
+                                },
+                            },
+                            right: UnaryExpression {
+                                operator: Not,
+                                operand: BinaryExpression {
+                                    operator: EqualEqual,
+                                    left: Identifier(
+                                        "a",
+                                    ),
+                                    right: Identifier(
+                                        "b",
+                                    ),
+                                },
+                            },
+                        },
+                        then_branch: Block(
+                            [
+                                AssignmentExpression {
+                                    target: Identifier(
+                                        "result",
+                                    ),
+                                    value: IntegerLiteral(
+                                        5,
+                                    ),
+                                },
+                            ],
+                        ),
+                        else_branch: None,
+                    },
+                    IfStatement {
+                        condition: BinaryExpression {
+                            operator: LogicalAnd,
+                            left: BinaryExpression {
+                                operator: LogicalAnd,
+                                left: BinaryExpression {
+                                    operator: GreaterEqual,
+                                    left: Identifier(
+                                        "a",
+                                    ),
+                                    right: Identifier(
+                                        "b",
+                                    ),
+                                },
+                                right: BinaryExpression {
+                                    operator: LessEqual,
+                                    left: Identifier(
+                                        "b",
+                                    ),
+                                    right: Identifier(
+                                        "c",
+                                    ),
+                                },
+                            },
+                            right: BinaryExpression {
+                                operator: NotEqual,
+                                left: Identifier(
+                                    "a",
+                                ),
+                                right: Identifier(
+                                    "c",
+                                ),
+                            },
+                        },
+                        then_branch: Block(
+                            [
+                                AssignmentExpression {
+                                    target: Identifier(
+                                        "result",
+                                    ),
+                                    value: IntegerLiteral(
+                                        6,
+                                    ),
+                                },
+                            ],
+                        ),
+                        else_branch: None,
+                    },
+                    ReturnStatement(
+                        Some(
+                            Identifier(
+                                "result",
+                            ),
+                        ),
+                    ),
+                ],
+            ),
+        },
+    ],
+)
