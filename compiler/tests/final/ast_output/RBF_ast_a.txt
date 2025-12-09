@@ -1,0 +1,145 @@
+Program(
+    [
+        FunctionDeclaration {
+            return_type: "int",
+            name: "main",
+            parameters: [],
+            body: Block(
+                [
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "x",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            20,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "y",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            5,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "result",
+                                    initializer: None,
+                                },
+                            ],
+                        },
+                    ),
+                    AssignmentExpression {
+                        target: Identifier(
+                            "result",
+                        ),
+                        value: BinaryExpression {
+                            operator: Add,
+                            left: BinaryExpression {
+                                operator: Add,
+                                left: BinaryExpression {
+                                    operator: Multiply,
+                                    left: Identifier(
+                                        "x",
+                                    ),
+                                    right: Identifier(
+                                        "y",
+                                    ),
+                                },
+                                right: BinaryExpression {
+                                    operator: Divide,
+                                    left: Identifier(
+                                        "x",
+                                    ),
+                                    right: Identifier(
+                                        "y",
+                                    ),
+                                },
+                            },
+                            right: IntegerLiteral(
+                                10,
+                            ),
+                        },
+                    },
+                    IfStatement {
+                        condition: BinaryExpression {
+                            operator: LogicalAnd,
+                            left: BinaryExpression {
+                                operator: EqualEqual,
+                                left: Identifier(
+                                    "result",
+                                ),
+                                right: IntegerLiteral(
+                                    113,
+                                ),
+                            },
+                            right: BinaryExpression {
+                                operator: GreaterThan,
+                                left: Identifier(
+                                    "x",
+                                ),
+                                right: Identifier(
+                                    "y",
+                                ),
+                            },
+                        },
+                        then_branch: Block(
+                            [
+                                AssignmentExpression {
+                                    target: Identifier(
+                                        "result",
+                                    ),
+                                    value: IntegerLiteral(
+                                        1,
+                                    ),
+                                },
+                            ],
+                        ),
+                        else_branch: Some(
+                            Block(
+                                [
+                                    AssignmentExpression {
+                                        target: Identifier(
+                                            "result",
+                                        ),
+                                        value: IntegerLiteral(
+                                            0,
+                                        ),
+                                    },
+                                ],
+                            ),
+                        ),
+                    },
+                    ReturnStatement(
+                        Some(
+                            Identifier(
+                                "result",
+                            ),
+                        ),
+                    ),
+                ],
+            ),
+        },
+    ],
+)

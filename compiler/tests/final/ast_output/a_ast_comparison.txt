@@ -1,0 +1,628 @@
+===== Bisheng AST: bisheng_ast_a.txt =====
+TranslationUnitDecl 0x400000c77258 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x400000c78100 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x400000c77820 '__int128'
+|-TypedefDecl 0x400000c78170 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x400000c77840 'unsigned __int128'
+|-TypedefDecl 0x400000d22978 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x400000d22750 'struct __NSConstantString_tag'
+|   `-Record 0x400000c781c8 '__NSConstantString_tag'
+|-TypedefDecl 0x400000d229e0 <<invalid sloc>> <invalid sloc> implicit __SVInt8_t '__SVInt8_t'
+| `-BuiltinType 0x400000c779e0 '__SVInt8_t'
+|-TypedefDecl 0x400000d22a48 <<invalid sloc>> <invalid sloc> implicit __SVInt16_t '__SVInt16_t'
+| `-BuiltinType 0x400000c77a00 '__SVInt16_t'
+|-TypedefDecl 0x400000d22ab0 <<invalid sloc>> <invalid sloc> implicit __SVInt32_t '__SVInt32_t'
+| `-BuiltinType 0x400000c77a20 '__SVInt32_t'
+|-TypedefDecl 0x400000d22b18 <<invalid sloc>> <invalid sloc> implicit __SVInt64_t '__SVInt64_t'
+| `-BuiltinType 0x400000c77a40 '__SVInt64_t'
+|-TypedefDecl 0x400000d22b80 <<invalid sloc>> <invalid sloc> implicit __SVUint8_t '__SVUint8_t'
+| `-BuiltinType 0x400000c77a60 '__SVUint8_t'
+|-TypedefDecl 0x400000d22be8 <<invalid sloc>> <invalid sloc> implicit __SVUint16_t '__SVUint16_t'
+| `-BuiltinType 0x400000c77a80 '__SVUint16_t'
+|-TypedefDecl 0x400000d22c50 <<invalid sloc>> <invalid sloc> implicit __SVUint32_t '__SVUint32_t'
+| `-BuiltinType 0x400000c77aa0 '__SVUint32_t'
+|-TypedefDecl 0x400000d22cb8 <<invalid sloc>> <invalid sloc> implicit __SVUint64_t '__SVUint64_t'
+| `-BuiltinType 0x400000c77ac0 '__SVUint64_t'
+|-TypedefDecl 0x400000d22d20 <<invalid sloc>> <invalid sloc> implicit __SVFloat16_t '__SVFloat16_t'
+| `-BuiltinType 0x400000c77ae0 '__SVFloat16_t'
+|-TypedefDecl 0x400000d22d88 <<invalid sloc>> <invalid sloc> implicit __SVFloat32_t '__SVFloat32_t'
+| `-BuiltinType 0x400000c77b00 '__SVFloat32_t'
+|-TypedefDecl 0x400000d22df0 <<invalid sloc>> <invalid sloc> implicit __SVFloat64_t '__SVFloat64_t'
+| `-BuiltinType 0x400000c77b20 '__SVFloat64_t'
+|-TypedefDecl 0x400000d22e58 <<invalid sloc>> <invalid sloc> implicit __SVBFloat16_t '__SVBFloat16_t'
+| `-BuiltinType 0x400000c77b40 '__SVBFloat16_t'
+|-TypedefDecl 0x400000d22ec0 <<invalid sloc>> <invalid sloc> implicit __clang_svint8x2_t '__clang_svint8x2_t'
+| `-BuiltinType 0x400000c77b60 '__clang_svint8x2_t'
+|-TypedefDecl 0x400000d22f28 <<invalid sloc>> <invalid sloc> implicit __clang_svint16x2_t '__clang_svint16x2_t'
+| `-BuiltinType 0x400000c77b80 '__clang_svint16x2_t'
+|-TypedefDecl 0x400000d22f90 <<invalid sloc>> <invalid sloc> implicit __clang_svint32x2_t '__clang_svint32x2_t'
+| `-BuiltinType 0x400000c77ba0 '__clang_svint32x2_t'
+|-TypedefDecl 0x400000d22ff8 <<invalid sloc>> <invalid sloc> implicit __clang_svint64x2_t '__clang_svint64x2_t'
+| `-BuiltinType 0x400000c77bc0 '__clang_svint64x2_t'
+|-TypedefDecl 0x400000d23060 <<invalid sloc>> <invalid sloc> implicit __clang_svuint8x2_t '__clang_svuint8x2_t'
+| `-BuiltinType 0x400000c77be0 '__clang_svuint8x2_t'
+|-TypedefDecl 0x400000d230c8 <<invalid sloc>> <invalid sloc> implicit __clang_svuint16x2_t '__clang_svuint16x2_t'
+| `-BuiltinType 0x400000c77c00 '__clang_svuint16x2_t'
+|-TypedefDecl 0x400000d23130 <<invalid sloc>> <invalid sloc> implicit __clang_svuint32x2_t '__clang_svuint32x2_t'
+| `-BuiltinType 0x400000c77c20 '__clang_svuint32x2_t'
+|-TypedefDecl 0x400000d23198 <<invalid sloc>> <invalid sloc> implicit __clang_svuint64x2_t '__clang_svuint64x2_t'
+| `-BuiltinType 0x400000c77c40 '__clang_svuint64x2_t'
+|-TypedefDecl 0x400000d23200 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat16x2_t '__clang_svfloat16x2_t'
+| `-BuiltinType 0x400000c77c60 '__clang_svfloat16x2_t'
+|-TypedefDecl 0x400000d23268 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat32x2_t '__clang_svfloat32x2_t'
+| `-BuiltinType 0x400000c77c80 '__clang_svfloat32x2_t'
+|-TypedefDecl 0x400000d232d0 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat64x2_t '__clang_svfloat64x2_t'
+| `-BuiltinType 0x400000c77ca0 '__clang_svfloat64x2_t'
+|-TypedefDecl 0x400000d23338 <<invalid sloc>> <invalid sloc> implicit __clang_svbfloat16x2_t '__clang_svbfloat16x2_t'
+| `-BuiltinType 0x400000c77cc0 '__clang_svbfloat16x2_t'
+|-TypedefDecl 0x400000d233a0 <<invalid sloc>> <invalid sloc> implicit __clang_svint8x3_t '__clang_svint8x3_t'
+| `-BuiltinType 0x400000c77ce0 '__clang_svint8x3_t'
+|-TypedefDecl 0x400000d23408 <<invalid sloc>> <invalid sloc> implicit __clang_svint16x3_t '__clang_svint16x3_t'
+| `-BuiltinType 0x400000c77d00 '__clang_svint16x3_t'
+|-TypedefDecl 0x400000d23470 <<invalid sloc>> <invalid sloc> implicit __clang_svint32x3_t '__clang_svint32x3_t'
+| `-BuiltinType 0x400000c77d20 '__clang_svint32x3_t'
+|-TypedefDecl 0x400000d234d8 <<invalid sloc>> <invalid sloc> implicit __clang_svint64x3_t '__clang_svint64x3_t'
+| `-BuiltinType 0x400000c77d40 '__clang_svint64x3_t'
+|-TypedefDecl 0x400000d23540 <<invalid sloc>> <invalid sloc> implicit __clang_svuint8x3_t '__clang_svuint8x3_t'
+| `-BuiltinType 0x400000c77d60 '__clang_svuint8x3_t'
+|-TypedefDecl 0x400000d235a8 <<invalid sloc>> <invalid sloc> implicit __clang_svuint16x3_t '__clang_svuint16x3_t'
+| `-BuiltinType 0x400000c77d80 '__clang_svuint16x3_t'
+|-TypedefDecl 0x400000d23610 <<invalid sloc>> <invalid sloc> implicit __clang_svuint32x3_t '__clang_svuint32x3_t'
+| `-BuiltinType 0x400000c77da0 '__clang_svuint32x3_t'
+|-TypedefDecl 0x400000d23678 <<invalid sloc>> <invalid sloc> implicit __clang_svuint64x3_t '__clang_svuint64x3_t'
+| `-BuiltinType 0x400000c77dc0 '__clang_svuint64x3_t'
+|-TypedefDecl 0x400000d236e0 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat16x3_t '__clang_svfloat16x3_t'
+| `-BuiltinType 0x400000c77de0 '__clang_svfloat16x3_t'
+|-TypedefDecl 0x400000d23f80 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat32x3_t '__clang_svfloat32x3_t'
+| `-BuiltinType 0x400000c77e00 '__clang_svfloat32x3_t'
+|-TypedefDecl 0x400000d23fe8 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat64x3_t '__clang_svfloat64x3_t'
+| `-BuiltinType 0x400000c77e20 '__clang_svfloat64x3_t'
+|-TypedefDecl 0x400000d24050 <<invalid sloc>> <invalid sloc> implicit __clang_svbfloat16x3_t '__clang_svbfloat16x3_t'
+| `-BuiltinType 0x400000c77e40 '__clang_svbfloat16x3_t'
+|-TypedefDecl 0x400000d240b8 <<invalid sloc>> <invalid sloc> implicit __clang_svint8x4_t '__clang_svint8x4_t'
+| `-BuiltinType 0x400000c77e60 '__clang_svint8x4_t'
+|-TypedefDecl 0x400000d24120 <<invalid sloc>> <invalid sloc> implicit __clang_svint16x4_t '__clang_svint16x4_t'
+| `-BuiltinType 0x400000c77e80 '__clang_svint16x4_t'
+|-TypedefDecl 0x400000d24188 <<invalid sloc>> <invalid sloc> implicit __clang_svint32x4_t '__clang_svint32x4_t'
+| `-BuiltinType 0x400000c77ea0 '__clang_svint32x4_t'
+|-TypedefDecl 0x400000d241f0 <<invalid sloc>> <invalid sloc> implicit __clang_svint64x4_t '__clang_svint64x4_t'
+| `-BuiltinType 0x400000c77ec0 '__clang_svint64x4_t'
+|-TypedefDecl 0x400000d24258 <<invalid sloc>> <invalid sloc> implicit __clang_svuint8x4_t '__clang_svuint8x4_t'
+| `-BuiltinType 0x400000c77ee0 '__clang_svuint8x4_t'
+|-TypedefDecl 0x400000d242c0 <<invalid sloc>> <invalid sloc> implicit __clang_svuint16x4_t '__clang_svuint16x4_t'
+| `-BuiltinType 0x400000c77f00 '__clang_svuint16x4_t'
+|-TypedefDecl 0x400000d24328 <<invalid sloc>> <invalid sloc> implicit __clang_svuint32x4_t '__clang_svuint32x4_t'
+| `-BuiltinType 0x400000c77f20 '__clang_svuint32x4_t'
+|-TypedefDecl 0x400000d24390 <<invalid sloc>> <invalid sloc> implicit __clang_svuint64x4_t '__clang_svuint64x4_t'
+| `-BuiltinType 0x400000c77f40 '__clang_svuint64x4_t'
+|-TypedefDecl 0x400000d243f8 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat16x4_t '__clang_svfloat16x4_t'
+| `-BuiltinType 0x400000c77f60 '__clang_svfloat16x4_t'
+|-TypedefDecl 0x400000d24460 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat32x4_t '__clang_svfloat32x4_t'
+| `-BuiltinType 0x400000c77f80 '__clang_svfloat32x4_t'
+|-TypedefDecl 0x400000d244c8 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat64x4_t '__clang_svfloat64x4_t'
+| `-BuiltinType 0x400000c77fa0 '__clang_svfloat64x4_t'
+|-TypedefDecl 0x400000d24530 <<invalid sloc>> <invalid sloc> implicit __clang_svbfloat16x4_t '__clang_svbfloat16x4_t'
+| `-BuiltinType 0x400000c77fc0 '__clang_svbfloat16x4_t'
+|-TypedefDecl 0x400000d24598 <<invalid sloc>> <invalid sloc> implicit __SVBool_t '__SVBool_t'
+| `-BuiltinType 0x400000c77fe0 '__SVBool_t'
+|-TypedefDecl 0x400000d24600 <<invalid sloc>> <invalid sloc> implicit __clang_svboolx2_t '__clang_svboolx2_t'
+| `-BuiltinType 0x400000c78000 '__clang_svboolx2_t'
+|-TypedefDecl 0x400000d24668 <<invalid sloc>> <invalid sloc> implicit __clang_svboolx4_t '__clang_svboolx4_t'
+| `-BuiltinType 0x400000c78020 '__clang_svboolx4_t'
+|-TypedefDecl 0x400000d246d0 <<invalid sloc>> <invalid sloc> implicit __SVCount_t '__SVCount_t'
+| `-BuiltinType 0x400000c78040 '__SVCount_t'
+|-TypedefDecl 0x400000d24770 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x400000d24730 'char *'
+|   `-BuiltinType 0x400000c77300 'char'
+|-TypedefDecl 0x400000d24a68 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list'
+| `-RecordType 0x400000d24850 'struct __va_list'
+|   `-Record 0x400000d247c8 '__va_list'
+`-FunctionDecl 0x400000d24b10 </app/compiler/tests/final/a.c:1:1, line:15:1> line:1:5 main 'int ()'
+  `-CompoundStmt 0x400000d3bcf0 <col:12, line:15:1>
+    |-DeclStmt 0x400000d24ca0 <line:2:5, col:15>
+    | `-VarDecl 0x400000d24c18 <col:5, col:13> col:9 used x 'int' cinit
+    |   `-IntegerLiteral 0x400000d24c80 <col:13> 'int' 20
+    |-DeclStmt 0x400000d24d58 <line:3:5, col:14>
+    | `-VarDecl 0x400000d24cd0 <col:5, col:13> col:9 used y 'int' cinit
+    |   `-IntegerLiteral 0x400000d24d38 <col:13> 'int' 5
+    |-DeclStmt 0x400000d24df0 <line:4:5, col:15>
+    | `-VarDecl 0x400000d24d88 <col:5, col:9> col:9 used result 'int'
+    |-BinaryOperator 0x400000d3ba40 <line:6:5, col:26> 'int' '='
+    | |-DeclRefExpr 0x400000d24e08 <col:5> 'int' lvalue Var 0x400000d24d88 'result' 'int'
+    | `-BinaryOperator 0x400000d3ba20 <col:14, col:26> 'int' '+'
+    |   |-BinaryOperator 0x400000d24f48 <col:14, col:24> 'int' '+'
+    |   | |-BinaryOperator 0x400000d24e98 <col:14, col:18> 'int' '*'
+    |   | | |-ImplicitCastExpr 0x400000d24e68 <col:14> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x400000d24e28 <col:14> 'int' lvalue Var 0x400000d24c18 'x' 'int'
+    |   | | `-ImplicitCastExpr 0x400000d24e80 <col:18> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x400000d24e48 <col:18> 'int' lvalue Var 0x400000d24cd0 'y' 'int'
+    |   | `-BinaryOperator 0x400000d24f28 <col:22, col:24> 'int' '/'
+    |   |   |-ImplicitCastExpr 0x400000d24ef8 <col:22> 'int' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x400000d24eb8 <col:22> 'int' lvalue Var 0x400000d24c18 'x' 'int'
+    |   |   `-ImplicitCastExpr 0x400000d24f10 <col:24> 'int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x400000d24ed8 <col:24> 'int' lvalue Var 0x400000d24cd0 'y' 'int'
+    |   `-IntegerLiteral 0x400000d3ba00 <col:26> 'int' 10
+    |-IfStmt 0x400000d3bc78 <line:8:5, line:12:5> has_else
+    | |-BinaryOperator 0x400000d3bb68 <line:8:9, col:30> 'int' '&&'
+    | | |-BinaryOperator 0x400000d3bab8 <col:9, col:19> 'int' '=='
+    | | | |-ImplicitCastExpr 0x400000d3baa0 <col:9> 'int' <LValueToRValue>
+    | | | | `-DeclRefExpr 0x400000d3ba60 <col:9> 'int' lvalue Var 0x400000d24d88 'result' 'int'
+    | | | `-IntegerLiteral 0x400000d3ba80 <col:19> 'int' 113
+    | | `-BinaryOperator 0x400000d3bb48 <col:26, col:30> 'int' '>'
+    | |   |-ImplicitCastExpr 0x400000d3bb18 <col:26> 'int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x400000d3bad8 <col:26> 'int' lvalue Var 0x400000d24c18 'x' 'int'
+    | |   `-ImplicitCastExpr 0x400000d3bb30 <col:30> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x400000d3baf8 <col:30> 'int' lvalue Var 0x400000d24cd0 'y' 'int'
+    | |-CompoundStmt 0x400000d3bbe8 <col:33, line:10:5>
+    | | `-BinaryOperator 0x400000d3bbc8 <line:9:9, col:18> 'int' '='
+    | |   |-DeclRefExpr 0x400000d3bb88 <col:9> 'int' lvalue Var 0x400000d24d88 'result' 'int'
+    | |   `-IntegerLiteral 0x400000d3bba8 <col:18> 'int' 1
+    | `-CompoundStmt 0x400000d3bc60 <line:10:12, line:12:5>
+    |   `-BinaryOperator 0x400000d3bc40 <line:11:9, col:18> 'int' '='
+    |     |-DeclRefExpr 0x400000d3bc00 <col:9> 'int' lvalue Var 0x400000d24d88 'result' 'int'
+    |     `-IntegerLiteral 0x400000d3bc20 <col:18> 'int' 0
+    `-ReturnStmt 0x400000d3bce0 <line:14:5, col:12>
+      `-ImplicitCastExpr 0x400000d3bcc8 <col:12> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x400000d3bca8 <col:12> 'int' lvalue Var 0x400000d24d88 'result' 'int'
+
+===== RBF AST: RBF_ast_a.txt =====
+Program(
+    [
+        FunctionDeclaration {
+            return_type: "int",
+            name: "main",
+            parameters: [],
+            body: Block(
+                [
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "x",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            20,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "y",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            5,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "result",
+                                    initializer: None,
+                                },
+                            ],
+                        },
+                    ),
+                    AssignmentExpression {
+                        target: Identifier(
+                            "result",
+                        ),
+                        value: BinaryExpression {
+                            operator: Add,
+                            left: BinaryExpression {
+                                operator: Add,
+                                left: BinaryExpression {
+                                    operator: Multiply,
+                                    left: Identifier(
+                                        "x",
+                                    ),
+                                    right: Identifier(
+                                        "y",
+                                    ),
+                                },
+                                right: BinaryExpression {
+                                    operator: Divide,
+                                    left: Identifier(
+                                        "x",
+                                    ),
+                                    right: Identifier(
+                                        "y",
+                                    ),
+                                },
+                            },
+                            right: IntegerLiteral(
+                                10,
+                            ),
+                        },
+                    },
+                    IfStatement {
+                        condition: BinaryExpression {
+                            operator: LogicalAnd,
+                            left: BinaryExpression {
+                                operator: EqualEqual,
+                                left: Identifier(
+                                    "result",
+                                ),
+                                right: IntegerLiteral(
+                                    113,
+                                ),
+                            },
+                            right: BinaryExpression {
+                                operator: GreaterThan,
+                                left: Identifier(
+                                    "x",
+                                ),
+                                right: Identifier(
+                                    "y",
+                                ),
+                            },
+                        },
+                        then_branch: Block(
+                            [
+                                AssignmentExpression {
+                                    target: Identifier(
+                                        "result",
+                                    ),
+                                    value: IntegerLiteral(
+                                        1,
+                                    ),
+                                },
+                            ],
+                        ),
+                        else_branch: Some(
+                            Block(
+                                [
+                                    AssignmentExpression {
+                                        target: Identifier(
+                                            "result",
+                                        ),
+                                        value: IntegerLiteral(
+                                            0,
+                                        ),
+                                    },
+                                ],
+                            ),
+                        ),
+                    },
+                    ReturnStatement(
+                        Some(
+                            Identifier(
+                                "result",
+                            ),
+                        ),
+                    ),
+                ],
+            ),
+        },
+    ],
+)
+
+===== Unified Diff: ast_a.diff =====
+--- /app/compiler/tests/final/ast_output/bisheng_ast_a.txt	2025-12-08 00:19:44.793404800 +0800
++++ /app/compiler/tests/final/ast_output/RBF_ast_a.txt	2025-12-08 00:19:44.341610700 +0800
+@@ -1,165 +1,145 @@
+-TranslationUnitDecl 0x400000c77258 <<invalid sloc>> <invalid sloc>
+-|-TypedefDecl 0x400000c78100 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+-| `-BuiltinType 0x400000c77820 '__int128'
+-|-TypedefDecl 0x400000c78170 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+-| `-BuiltinType 0x400000c77840 'unsigned __int128'
+-|-TypedefDecl 0x400000d22978 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+-| `-RecordType 0x400000d22750 'struct __NSConstantString_tag'
+-|   `-Record 0x400000c781c8 '__NSConstantString_tag'
+-|-TypedefDecl 0x400000d229e0 <<invalid sloc>> <invalid sloc> implicit __SVInt8_t '__SVInt8_t'
+-| `-BuiltinType 0x400000c779e0 '__SVInt8_t'
+-|-TypedefDecl 0x400000d22a48 <<invalid sloc>> <invalid sloc> implicit __SVInt16_t '__SVInt16_t'
+-| `-BuiltinType 0x400000c77a00 '__SVInt16_t'
+-|-TypedefDecl 0x400000d22ab0 <<invalid sloc>> <invalid sloc> implicit __SVInt32_t '__SVInt32_t'
+-| `-BuiltinType 0x400000c77a20 '__SVInt32_t'
+-|-TypedefDecl 0x400000d22b18 <<invalid sloc>> <invalid sloc> implicit __SVInt64_t '__SVInt64_t'
+-| `-BuiltinType 0x400000c77a40 '__SVInt64_t'
+-|-TypedefDecl 0x400000d22b80 <<invalid sloc>> <invalid sloc> implicit __SVUint8_t '__SVUint8_t'
+-| `-BuiltinType 0x400000c77a60 '__SVUint8_t'
+-|-TypedefDecl 0x400000d22be8 <<invalid sloc>> <invalid sloc> implicit __SVUint16_t '__SVUint16_t'
+-| `-BuiltinType 0x400000c77a80 '__SVUint16_t'
+-|-TypedefDecl 0x400000d22c50 <<invalid sloc>> <invalid sloc> implicit __SVUint32_t '__SVUint32_t'
+-| `-BuiltinType 0x400000c77aa0 '__SVUint32_t'
+-|-TypedefDecl 0x400000d22cb8 <<invalid sloc>> <invalid sloc> implicit __SVUint64_t '__SVUint64_t'
+-| `-BuiltinType 0x400000c77ac0 '__SVUint64_t'
+-|-TypedefDecl 0x400000d22d20 <<invalid sloc>> <invalid sloc> implicit __SVFloat16_t '__SVFloat16_t'
+-| `-BuiltinType 0x400000c77ae0 '__SVFloat16_t'
+-|-TypedefDecl 0x400000d22d88 <<invalid sloc>> <invalid sloc> implicit __SVFloat32_t '__SVFloat32_t'
+-| `-BuiltinType 0x400000c77b00 '__SVFloat32_t'
+-|-TypedefDecl 0x400000d22df0 <<invalid sloc>> <invalid sloc> implicit __SVFloat64_t '__SVFloat64_t'
+-| `-BuiltinType 0x400000c77b20 '__SVFloat64_t'
+-|-TypedefDecl 0x400000d22e58 <<invalid sloc>> <invalid sloc> implicit __SVBFloat16_t '__SVBFloat16_t'
+-| `-BuiltinType 0x400000c77b40 '__SVBFloat16_t'
+-|-TypedefDecl 0x400000d22ec0 <<invalid sloc>> <invalid sloc> implicit __clang_svint8x2_t '__clang_svint8x2_t'
+-| `-BuiltinType 0x400000c77b60 '__clang_svint8x2_t'
+-|-TypedefDecl 0x400000d22f28 <<invalid sloc>> <invalid sloc> implicit __clang_svint16x2_t '__clang_svint16x2_t'
+-| `-BuiltinType 0x400000c77b80 '__clang_svint16x2_t'
+-|-TypedefDecl 0x400000d22f90 <<invalid sloc>> <invalid sloc> implicit __clang_svint32x2_t '__clang_svint32x2_t'
+-| `-BuiltinType 0x400000c77ba0 '__clang_svint32x2_t'
+-|-TypedefDecl 0x400000d22ff8 <<invalid sloc>> <invalid sloc> implicit __clang_svint64x2_t '__clang_svint64x2_t'
+-| `-BuiltinType 0x400000c77bc0 '__clang_svint64x2_t'
+-|-TypedefDecl 0x400000d23060 <<invalid sloc>> <invalid sloc> implicit __clang_svuint8x2_t '__clang_svuint8x2_t'
+-| `-BuiltinType 0x400000c77be0 '__clang_svuint8x2_t'
+-|-TypedefDecl 0x400000d230c8 <<invalid sloc>> <invalid sloc> implicit __clang_svuint16x2_t '__clang_svuint16x2_t'
+-| `-BuiltinType 0x400000c77c00 '__clang_svuint16x2_t'
+-|-TypedefDecl 0x400000d23130 <<invalid sloc>> <invalid sloc> implicit __clang_svuint32x2_t '__clang_svuint32x2_t'
+-| `-BuiltinType 0x400000c77c20 '__clang_svuint32x2_t'
+-|-TypedefDecl 0x400000d23198 <<invalid sloc>> <invalid sloc> implicit __clang_svuint64x2_t '__clang_svuint64x2_t'
+-| `-BuiltinType 0x400000c77c40 '__clang_svuint64x2_t'
+-|-TypedefDecl 0x400000d23200 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat16x2_t '__clang_svfloat16x2_t'
+-| `-BuiltinType 0x400000c77c60 '__clang_svfloat16x2_t'
+-|-TypedefDecl 0x400000d23268 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat32x2_t '__clang_svfloat32x2_t'
+-| `-BuiltinType 0x400000c77c80 '__clang_svfloat32x2_t'
+-|-TypedefDecl 0x400000d232d0 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat64x2_t '__clang_svfloat64x2_t'
+-| `-BuiltinType 0x400000c77ca0 '__clang_svfloat64x2_t'
+-|-TypedefDecl 0x400000d23338 <<invalid sloc>> <invalid sloc> implicit __clang_svbfloat16x2_t '__clang_svbfloat16x2_t'
+-| `-BuiltinType 0x400000c77cc0 '__clang_svbfloat16x2_t'
+-|-TypedefDecl 0x400000d233a0 <<invalid sloc>> <invalid sloc> implicit __clang_svint8x3_t '__clang_svint8x3_t'
+-| `-BuiltinType 0x400000c77ce0 '__clang_svint8x3_t'
+-|-TypedefDecl 0x400000d23408 <<invalid sloc>> <invalid sloc> implicit __clang_svint16x3_t '__clang_svint16x3_t'
+-| `-BuiltinType 0x400000c77d00 '__clang_svint16x3_t'
+-|-TypedefDecl 0x400000d23470 <<invalid sloc>> <invalid sloc> implicit __clang_svint32x3_t '__clang_svint32x3_t'
+-| `-BuiltinType 0x400000c77d20 '__clang_svint32x3_t'
+-|-TypedefDecl 0x400000d234d8 <<invalid sloc>> <invalid sloc> implicit __clang_svint64x3_t '__clang_svint64x3_t'
+-| `-BuiltinType 0x400000c77d40 '__clang_svint64x3_t'
+-|-TypedefDecl 0x400000d23540 <<invalid sloc>> <invalid sloc> implicit __clang_svuint8x3_t '__clang_svuint8x3_t'
+-| `-BuiltinType 0x400000c77d60 '__clang_svuint8x3_t'
+-|-TypedefDecl 0x400000d235a8 <<invalid sloc>> <invalid sloc> implicit __clang_svuint16x3_t '__clang_svuint16x3_t'
+-| `-BuiltinType 0x400000c77d80 '__clang_svuint16x3_t'
+-|-TypedefDecl 0x400000d23610 <<invalid sloc>> <invalid sloc> implicit __clang_svuint32x3_t '__clang_svuint32x3_t'
+-| `-BuiltinType 0x400000c77da0 '__clang_svuint32x3_t'
+-|-TypedefDecl 0x400000d23678 <<invalid sloc>> <invalid sloc> implicit __clang_svuint64x3_t '__clang_svuint64x3_t'
+-| `-BuiltinType 0x400000c77dc0 '__clang_svuint64x3_t'
+-|-TypedefDecl 0x400000d236e0 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat16x3_t '__clang_svfloat16x3_t'
+-| `-BuiltinType 0x400000c77de0 '__clang_svfloat16x3_t'
+-|-TypedefDecl 0x400000d23f80 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat32x3_t '__clang_svfloat32x3_t'
+-| `-BuiltinType 0x400000c77e00 '__clang_svfloat32x3_t'
+-|-TypedefDecl 0x400000d23fe8 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat64x3_t '__clang_svfloat64x3_t'
+-| `-BuiltinType 0x400000c77e20 '__clang_svfloat64x3_t'
+-|-TypedefDecl 0x400000d24050 <<invalid sloc>> <invalid sloc> implicit __clang_svbfloat16x3_t '__clang_svbfloat16x3_t'
+-| `-BuiltinType 0x400000c77e40 '__clang_svbfloat16x3_t'
+-|-TypedefDecl 0x400000d240b8 <<invalid sloc>> <invalid sloc> implicit __clang_svint8x4_t '__clang_svint8x4_t'
+-| `-BuiltinType 0x400000c77e60 '__clang_svint8x4_t'
+-|-TypedefDecl 0x400000d24120 <<invalid sloc>> <invalid sloc> implicit __clang_svint16x4_t '__clang_svint16x4_t'
+-| `-BuiltinType 0x400000c77e80 '__clang_svint16x4_t'
+-|-TypedefDecl 0x400000d24188 <<invalid sloc>> <invalid sloc> implicit __clang_svint32x4_t '__clang_svint32x4_t'
+-| `-BuiltinType 0x400000c77ea0 '__clang_svint32x4_t'
+-|-TypedefDecl 0x400000d241f0 <<invalid sloc>> <invalid sloc> implicit __clang_svint64x4_t '__clang_svint64x4_t'
+-| `-BuiltinType 0x400000c77ec0 '__clang_svint64x4_t'
+-|-TypedefDecl 0x400000d24258 <<invalid sloc>> <invalid sloc> implicit __clang_svuint8x4_t '__clang_svuint8x4_t'
+-| `-BuiltinType 0x400000c77ee0 '__clang_svuint8x4_t'
+-|-TypedefDecl 0x400000d242c0 <<invalid sloc>> <invalid sloc> implicit __clang_svuint16x4_t '__clang_svuint16x4_t'
+-| `-BuiltinType 0x400000c77f00 '__clang_svuint16x4_t'
+-|-TypedefDecl 0x400000d24328 <<invalid sloc>> <invalid sloc> implicit __clang_svuint32x4_t '__clang_svuint32x4_t'
+-| `-BuiltinType 0x400000c77f20 '__clang_svuint32x4_t'
+-|-TypedefDecl 0x400000d24390 <<invalid sloc>> <invalid sloc> implicit __clang_svuint64x4_t '__clang_svuint64x4_t'
+-| `-BuiltinType 0x400000c77f40 '__clang_svuint64x4_t'
+-|-TypedefDecl 0x400000d243f8 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat16x4_t '__clang_svfloat16x4_t'
+-| `-BuiltinType 0x400000c77f60 '__clang_svfloat16x4_t'
+-|-TypedefDecl 0x400000d24460 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat32x4_t '__clang_svfloat32x4_t'
+-| `-BuiltinType 0x400000c77f80 '__clang_svfloat32x4_t'
+-|-TypedefDecl 0x400000d244c8 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat64x4_t '__clang_svfloat64x4_t'
+-| `-BuiltinType 0x400000c77fa0 '__clang_svfloat64x4_t'
+-|-TypedefDecl 0x400000d24530 <<invalid sloc>> <invalid sloc> implicit __clang_svbfloat16x4_t '__clang_svbfloat16x4_t'
+-| `-BuiltinType 0x400000c77fc0 '__clang_svbfloat16x4_t'
+-|-TypedefDecl 0x400000d24598 <<invalid sloc>> <invalid sloc> implicit __SVBool_t '__SVBool_t'
+-| `-BuiltinType 0x400000c77fe0 '__SVBool_t'
+-|-TypedefDecl 0x400000d24600 <<invalid sloc>> <invalid sloc> implicit __clang_svboolx2_t '__clang_svboolx2_t'
+-| `-BuiltinType 0x400000c78000 '__clang_svboolx2_t'
+-|-TypedefDecl 0x400000d24668 <<invalid sloc>> <invalid sloc> implicit __clang_svboolx4_t '__clang_svboolx4_t'
+-| `-BuiltinType 0x400000c78020 '__clang_svboolx4_t'
+-|-TypedefDecl 0x400000d246d0 <<invalid sloc>> <invalid sloc> implicit __SVCount_t '__SVCount_t'
+-| `-BuiltinType 0x400000c78040 '__SVCount_t'
+-|-TypedefDecl 0x400000d24770 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+-| `-PointerType 0x400000d24730 'char *'
+-|   `-BuiltinType 0x400000c77300 'char'
+-|-TypedefDecl 0x400000d24a68 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list'
+-| `-RecordType 0x400000d24850 'struct __va_list'
+-|   `-Record 0x400000d247c8 '__va_list'
+-`-FunctionDecl 0x400000d24b10 </app/compiler/tests/final/a.c:1:1, line:15:1> line:1:5 main 'int ()'
+-  `-CompoundStmt 0x400000d3bcf0 <col:12, line:15:1>
+-    |-DeclStmt 0x400000d24ca0 <line:2:5, col:15>
+-    | `-VarDecl 0x400000d24c18 <col:5, col:13> col:9 used x 'int' cinit
+-    |   `-IntegerLiteral 0x400000d24c80 <col:13> 'int' 20
+-    |-DeclStmt 0x400000d24d58 <line:3:5, col:14>
+-    | `-VarDecl 0x400000d24cd0 <col:5, col:13> col:9 used y 'int' cinit
+-    |   `-IntegerLiteral 0x400000d24d38 <col:13> 'int' 5
+-    |-DeclStmt 0x400000d24df0 <line:4:5, col:15>
+-    | `-VarDecl 0x400000d24d88 <col:5, col:9> col:9 used result 'int'
+-    |-BinaryOperator 0x400000d3ba40 <line:6:5, col:26> 'int' '='
+-    | |-DeclRefExpr 0x400000d24e08 <col:5> 'int' lvalue Var 0x400000d24d88 'result' 'int'
+-    | `-BinaryOperator 0x400000d3ba20 <col:14, col:26> 'int' '+'
+-    |   |-BinaryOperator 0x400000d24f48 <col:14, col:24> 'int' '+'
+-    |   | |-BinaryOperator 0x400000d24e98 <col:14, col:18> 'int' '*'
+-    |   | | |-ImplicitCastExpr 0x400000d24e68 <col:14> 'int' <LValueToRValue>
+-    |   | | | `-DeclRefExpr 0x400000d24e28 <col:14> 'int' lvalue Var 0x400000d24c18 'x' 'int'
+-    |   | | `-ImplicitCastExpr 0x400000d24e80 <col:18> 'int' <LValueToRValue>
+-    |   | |   `-DeclRefExpr 0x400000d24e48 <col:18> 'int' lvalue Var 0x400000d24cd0 'y' 'int'
+-    |   | `-BinaryOperator 0x400000d24f28 <col:22, col:24> 'int' '/'
+-    |   |   |-ImplicitCastExpr 0x400000d24ef8 <col:22> 'int' <LValueToRValue>
+-    |   |   | `-DeclRefExpr 0x400000d24eb8 <col:22> 'int' lvalue Var 0x400000d24c18 'x' 'int'
+-    |   |   `-ImplicitCastExpr 0x400000d24f10 <col:24> 'int' <LValueToRValue>
+-    |   |     `-DeclRefExpr 0x400000d24ed8 <col:24> 'int' lvalue Var 0x400000d24cd0 'y' 'int'
+-    |   `-IntegerLiteral 0x400000d3ba00 <col:26> 'int' 10
+-    |-IfStmt 0x400000d3bc78 <line:8:5, line:12:5> has_else
+-    | |-BinaryOperator 0x400000d3bb68 <line:8:9, col:30> 'int' '&&'
+-    | | |-BinaryOperator 0x400000d3bab8 <col:9, col:19> 'int' '=='
+-    | | | |-ImplicitCastExpr 0x400000d3baa0 <col:9> 'int' <LValueToRValue>
+-    | | | | `-DeclRefExpr 0x400000d3ba60 <col:9> 'int' lvalue Var 0x400000d24d88 'result' 'int'
+-    | | | `-IntegerLiteral 0x400000d3ba80 <col:19> 'int' 113
+-    | | `-BinaryOperator 0x400000d3bb48 <col:26, col:30> 'int' '>'
+-    | |   |-ImplicitCastExpr 0x400000d3bb18 <col:26> 'int' <LValueToRValue>
+-    | |   | `-DeclRefExpr 0x400000d3bad8 <col:26> 'int' lvalue Var 0x400000d24c18 'x' 'int'
+-    | |   `-ImplicitCastExpr 0x400000d3bb30 <col:30> 'int' <LValueToRValue>
+-    | |     `-DeclRefExpr 0x400000d3baf8 <col:30> 'int' lvalue Var 0x400000d24cd0 'y' 'int'
+-    | |-CompoundStmt 0x400000d3bbe8 <col:33, line:10:5>
+-    | | `-BinaryOperator 0x400000d3bbc8 <line:9:9, col:18> 'int' '='
+-    | |   |-DeclRefExpr 0x400000d3bb88 <col:9> 'int' lvalue Var 0x400000d24d88 'result' 'int'
+-    | |   `-IntegerLiteral 0x400000d3bba8 <col:18> 'int' 1
+-    | `-CompoundStmt 0x400000d3bc60 <line:10:12, line:12:5>
+-    |   `-BinaryOperator 0x400000d3bc40 <line:11:9, col:18> 'int' '='
+-    |     |-DeclRefExpr 0x400000d3bc00 <col:9> 'int' lvalue Var 0x400000d24d88 'result' 'int'
+-    |     `-IntegerLiteral 0x400000d3bc20 <col:18> 'int' 0
+-    `-ReturnStmt 0x400000d3bce0 <line:14:5, col:12>
+-      `-ImplicitCastExpr 0x400000d3bcc8 <col:12> 'int' <LValueToRValue>
+-        `-DeclRefExpr 0x400000d3bca8 <col:12> 'int' lvalue Var 0x400000d24d88 'result' 'int'
++Program(
++    [
++        FunctionDeclaration {
++            return_type: "int",
++            name: "main",
++            parameters: [],
++            body: Block(
++                [
++                    DeclStmt(
++                        MultiVarDecl {
++                            type_name: "int",
++                            declarations: [
++                                VariableDeclaration {
++                                    type_name: "int",
++                                    name: "x",
++                                    initializer: Some(
++                                        IntegerLiteral(
++                                            20,
++                                        ),
++                                    ),
++                                },
++                            ],
++                        },
++                    ),
++                    DeclStmt(
++                        MultiVarDecl {
++                            type_name: "int",
++                            declarations: [
++                                VariableDeclaration {
++                                    type_name: "int",
++                                    name: "y",
++                                    initializer: Some(
++                                        IntegerLiteral(
++                                            5,
++                                        ),
++                                    ),
++                                },
++                            ],
++                        },
++                    ),
++                    DeclStmt(
++                        MultiVarDecl {
++                            type_name: "int",
++                            declarations: [
++                                VariableDeclaration {
++                                    type_name: "int",
++                                    name: "result",
++                                    initializer: None,
++                                },
++                            ],
++                        },
++                    ),
++                    AssignmentExpression {
++                        target: Identifier(
++                            "result",
++                        ),
++                        value: BinaryExpression {
++                            operator: Add,
++                            left: BinaryExpression {
++                                operator: Add,
++                                left: BinaryExpression {
++                                    operator: Multiply,
++                                    left: Identifier(
++                                        "x",
++                                    ),
++                                    right: Identifier(
++                                        "y",
++                                    ),
++                                },
++                                right: BinaryExpression {
++                                    operator: Divide,
++                                    left: Identifier(
++                                        "x",
++                                    ),
++                                    right: Identifier(
++                                        "y",
++                                    ),
++                                },
++                            },
++                            right: IntegerLiteral(
++                                10,
++                            ),
++                        },
++                    },
++                    IfStatement {
++                        condition: BinaryExpression {
++                            operator: LogicalAnd,
++                            left: BinaryExpression {
++                                operator: EqualEqual,
++                                left: Identifier(
++                                    "result",
++                                ),
++                                right: IntegerLiteral(
++                                    113,
++                                ),
++                            },
++                            right: BinaryExpression {
++                                operator: GreaterThan,
++                                left: Identifier(
++                                    "x",
++                                ),
++                                right: Identifier(
++                                    "y",
++                                ),
++                            },
++                        },
++                        then_branch: Block(
++                            [
++                                AssignmentExpression {
++                                    target: Identifier(
++                                        "result",
++                                    ),
++                                    value: IntegerLiteral(
++                                        1,
++                                    ),
++                                },
++                            ],
++                        ),
++                        else_branch: Some(
++                            Block(
++                                [
++                                    AssignmentExpression {
++                                        target: Identifier(
++                                            "result",
++                                        ),
++                                        value: IntegerLiteral(
++                                            0,
++                                        ),
++                                    },
++                                ],
++                            ),
++                        ),
++                    },
++                    ReturnStatement(
++                        Some(
++                            Identifier(
++                                "result",
++                            ),
++                        ),
++                    ),
++                ],
++            ),
++        },
++    ],
++)

@@ -1,0 +1,132 @@
+===== Bisheng tokens: bisheng_aminus_tokens.txt =====
+int 'int'	 [StartOfLine]	Loc=</app/compiler/tests/final/a-.c:6:1>
+identifier 'main'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:6:5>
+l_paren '('		Loc=</app/compiler/tests/final/a-.c:6:9>
+r_paren ')'		Loc=</app/compiler/tests/final/a-.c:6:10>
+l_brace '{'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:6:12>
+int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:5>
+identifier 'p'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:9>
+equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:11>
+numeric_constant '1'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:13>
+semi ';'		Loc=</app/compiler/tests/final/a-.c:7:14>
+int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:5>
+identifier 'q'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:9>
+equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:11>
+numeric_constant '2'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:13>
+semi ';'		Loc=</app/compiler/tests/final/a-.c:8:14>
+int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:5>
+identifier 'r'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:9>
+equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:11>
+l_paren '('	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:13>
+identifier 'p'		Loc=</app/compiler/tests/final/a-.c:9:14>
+plus '+'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:16>
+identifier 'q'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:18>
+r_paren ')'		Loc=</app/compiler/tests/final/a-.c:9:19>
+plus '+'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:21>
+numeric_constant '3'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:23>
+minus '-'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:25>
+numeric_constant '1'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:27>
+semi ';'		Loc=</app/compiler/tests/final/a-.c:9:28>
+int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:5>
+identifier 'm'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:9>
+equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:11>
+identifier 'r'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:13>
+semi ';'		Loc=</app/compiler/tests/final/a-.c:10:14>
+return 'return'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:12:5>
+identifier 'r'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:12:12>
+semi ';'		Loc=</app/compiler/tests/final/a-.c:12:13>
+r_brace '}'	 [StartOfLine]	Loc=</app/compiler/tests/final/a-.c:13:1>
+eof ''		Loc=</app/compiler/tests/final/a-.c:13:2>
+
+===== RBF tokens: RBF_aminus_tokens.txt =====
+int 'int'	 [StartOfLine]	Loc=</app/compiler/tests/final/a-.c:6:1>
+identifier 'main'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:6:5>
+l_paren '('			Loc=</app/compiler/tests/final/a-.c:6:9>
+r_paren ')'			Loc=</app/compiler/tests/final/a-.c:6:10>
+l_brace '{'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:6:12>
+int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:5>
+identifier 'p'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:9>
+equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:11>
+numeric_constant '1'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:13>
+semi ';'			Loc=</app/compiler/tests/final/a-.c:7:14>
+int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:5>
+identifier 'q'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:9>
+equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:11>
+numeric_constant '2'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:13>
+semi ';'			Loc=</app/compiler/tests/final/a-.c:8:14>
+int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:5>
+identifier 'r'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:9>
+equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:11>
+l_paren '('	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:13>
+identifier 'p'			Loc=</app/compiler/tests/final/a-.c:9:14>
+plus '+'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:16>
+identifier 'q'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:18>
+r_paren ')'			Loc=</app/compiler/tests/final/a-.c:9:19>
+plus '+'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:21>
+numeric_constant '3'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:23>
+minus '-'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:25>
+numeric_constant '1'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:27>
+semi ';'			Loc=</app/compiler/tests/final/a-.c:9:28>
+int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:5>
+identifier 'm'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:9>
+equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:11>
+identifier 'r'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:13>
+semi ';'			Loc=</app/compiler/tests/final/a-.c:10:14>
+return 'return'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:12:5>
+identifier 'r'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:12:12>
+semi ';'			Loc=</app/compiler/tests/final/a-.c:12:13>
+r_brace '}'	 [StartOfLine]	Loc=</app/compiler/tests/final/a-.c:13:1>
+eof ''			Loc=</app/compiler/tests/final/a-.c:14:1>
+
+===== Unified Diff: aminus.diff =====
+--- /app/compiler/tests/final/lexer_output/bisheng_aminus_tokens.txt	2025-12-08 00:14:51.746680700 +0800
++++ /app/compiler/tests/final/lexer_output/RBF_aminus_tokens.txt	2025-12-08 00:14:51.231151600 +0800
+@@ -1,38 +1,38 @@
+ int 'int'	 [StartOfLine]	Loc=</app/compiler/tests/final/a-.c:6:1>
+ identifier 'main'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:6:5>
+-l_paren '('		Loc=</app/compiler/tests/final/a-.c:6:9>
+-r_paren ')'		Loc=</app/compiler/tests/final/a-.c:6:10>
++l_paren '('			Loc=</app/compiler/tests/final/a-.c:6:9>
++r_paren ')'			Loc=</app/compiler/tests/final/a-.c:6:10>
+ l_brace '{'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:6:12>
+ int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:5>
+ identifier 'p'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:9>
+ equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:11>
+ numeric_constant '1'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:7:13>
+-semi ';'		Loc=</app/compiler/tests/final/a-.c:7:14>
++semi ';'			Loc=</app/compiler/tests/final/a-.c:7:14>
+ int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:5>
+ identifier 'q'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:9>
+ equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:11>
+ numeric_constant '2'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:8:13>
+-semi ';'		Loc=</app/compiler/tests/final/a-.c:8:14>
++semi ';'			Loc=</app/compiler/tests/final/a-.c:8:14>
+ int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:5>
+ identifier 'r'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:9>
+ equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:11>
+ l_paren '('	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:13>
+-identifier 'p'		Loc=</app/compiler/tests/final/a-.c:9:14>
++identifier 'p'			Loc=</app/compiler/tests/final/a-.c:9:14>
+ plus '+'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:16>
+ identifier 'q'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:18>
+-r_paren ')'		Loc=</app/compiler/tests/final/a-.c:9:19>
++r_paren ')'			Loc=</app/compiler/tests/final/a-.c:9:19>
+ plus '+'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:21>
+ numeric_constant '3'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:23>
+ minus '-'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:25>
+ numeric_constant '1'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:9:27>
+-semi ';'		Loc=</app/compiler/tests/final/a-.c:9:28>
++semi ';'			Loc=</app/compiler/tests/final/a-.c:9:28>
+ int 'int'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:5>
+ identifier 'm'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:9>
+ equal '='	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:11>
+ identifier 'r'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:10:13>
+-semi ';'		Loc=</app/compiler/tests/final/a-.c:10:14>
++semi ';'			Loc=</app/compiler/tests/final/a-.c:10:14>
+ return 'return'	 [StartOfLine] [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:12:5>
+ identifier 'r'	 [LeadingSpace]	Loc=</app/compiler/tests/final/a-.c:12:12>
+-semi ';'		Loc=</app/compiler/tests/final/a-.c:12:13>
++semi ';'			Loc=</app/compiler/tests/final/a-.c:12:13>
+ r_brace '}'	 [StartOfLine]	Loc=</app/compiler/tests/final/a-.c:13:1>
+-eof ''		Loc=</app/compiler/tests/final/a-.c:13:2>
++eof ''			Loc=</app/compiler/tests/final/a-.c:14:1>

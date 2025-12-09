@@ -1,0 +1,65 @@
+; ModuleID = 'main'
+source_filename = "main"
+
+define i32 @add(i32 %0, i32 %1) {
+entry:
+  %a = alloca i32, align 4
+  store i32 %0, ptr %a, align 4
+  %b = alloca i32, align 4
+  store i32 %1, ptr %b, align 4
+  %a1 = load i32, ptr %a, align 4
+  %b2 = load i32, ptr %b, align 4
+  %add = add i32 %a1, %b2
+  ret i32 %add
+}
+
+define i32 @multiply(i32 %0, i32 %1) {
+entry:
+  %a = alloca i32, align 4
+  store i32 %0, ptr %a, align 4
+  %b = alloca i32, align 4
+  store i32 %1, ptr %b, align 4
+  %a1 = load i32, ptr %a, align 4
+  %b2 = load i32, ptr %b, align 4
+  %mul = mul i32 %a1, %b2
+  ret i32 %mul
+}
+
+define i32 @main() {
+entry:
+  %x = alloca i32, align 4
+  store i32 10, ptr %x, align 4
+  %y = alloca i32, align 4
+  store i32 20, ptr %y, align 4
+  %sum = alloca i32, align 4
+  %x1 = load i32, ptr %x, align 4
+  %y2 = load i32, ptr %y, align 4
+  %call = call i32 @add(i32 %x1, i32 %y2)
+  store i32 %call, ptr %sum, align 4
+  %product = alloca i32, align 4
+  %x3 = load i32, ptr %x, align 4
+  %y4 = load i32, ptr %y, align 4
+  %call5 = call i32 @multiply(i32 %x3, i32 %y4)
+  store i32 %call5, ptr %product, align 4
+  %x6 = load i32, ptr %x, align 4
+  %y7 = load i32, ptr %y, align 4
+  %gt = icmp sgt i32 %x6, %y7
+  %not = icmp eq i1 %gt, false
+  %sum8 = load i32, ptr %sum, align 4
+  %product9 = load i32, ptr %product, align 4
+  %gt10 = icmp sgt i32 %sum8, %product9
+  %and = and i1 %not, %gt10
+  br i1 %and, label %then, label %else
+
+then:                                             ; preds = %entry
+  %sum11 = load i32, ptr %sum, align 4
+  ret i32 %sum11
+
+else:                                             ; preds = %entry
+  %product12 = load i32, ptr %product, align 4
+  %neg = sub i32 0, %product12
+  ret i32 %neg
+
+merge:                                            ; No predecessors!
+  ret i32 0
+}

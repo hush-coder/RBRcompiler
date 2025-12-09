@@ -134,7 +134,9 @@ impl<'ctx> IRBuilder<'ctx> {
     pub fn build_not(&self, value: IntValue<'ctx>) -> IntValue<'ctx> {
         // 逻辑非：!x = (x == 0) ? 1 : 0
         // 实现为：icmp eq x, 0
-        self.builder.build_int_compare(inkwell::IntPredicate::EQ, value, self.i32_type.const_int(0, false), "not").unwrap()
+        // 使用与输入相同位宽的零常量，避免 i1 与 i32 比较不一致导致的 LLVM 验证错误
+        let zero = value.get_type().const_int(0, false);
+        self.builder.build_int_compare(inkwell::IntPredicate::EQ, value, zero, "not").unwrap()
     }
 
     pub fn build_neg(&self, value: IntValue<'ctx>) -> IntValue<'ctx> {

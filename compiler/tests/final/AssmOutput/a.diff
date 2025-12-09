@@ -1,0 +1,115 @@
+--- AssmOutput/a_bisheng.s	2025-12-07 23:57:31.560948200 +0800
++++ AssmOutput/a_our.s	2025-12-07 23:57:30.959571600 +0800
+@@ -1,55 +1,67 @@
+ 	.text
+-	.file	"a.c"
+-	.globl	main                            // -- Begin function main
++	.file	"input.c"
++	.globl	main
+ 	.p2align	2
+ 	.type	main,@function
+-main:                                   // @main
++main:
+ 	.cfi_startproc
+-// %bb.0:
++	stp	x29, x30, [sp, #-16]!
++	mov	x29, sp
+ 	sub	sp, sp, #16
+-	.cfi_def_cfa_offset 16
+-	str	wzr, [sp, #12]
+-	mov	w8, #20                         // =0x14
+-	str	w8, [sp, #8]
+-	mov	w8, #5                          // =0x5
++	mov	w8, #20
+ 	str	w8, [sp, #4]
+-	ldr	w8, [sp, #8]
+-	ldr	w9, [sp, #4]
+-	mul	w8, w8, w9
+-	ldr	w9, [sp, #8]
+-	ldr	w10, [sp, #4]
+-	sdiv	w9, w9, w10
+-	add	w8, w8, w9
+-	add	w8, w8, #10
+-	str	w8, [sp]
+-	ldr	w8, [sp]
+-	subs	w8, w8, #113
+-	cset	w8, ne
+-	tbnz	w8, #0, .LBB0_3
+-	b	.LBB0_1
+-.LBB0_1:
+-	ldr	w8, [sp, #8]
+-	ldr	w9, [sp, #4]
+-	subs	w8, w8, w9
+-	cset	w8, le
+-	tbnz	w8, #0, .LBB0_3
+-	b	.LBB0_2
+-.LBB0_2:
+-	mov	w8, #1                          // =0x1
+-	str	w8, [sp]
+-	b	.LBB0_4
+-.LBB0_3:
+-	str	wzr, [sp]
+-	b	.LBB0_4
+-.LBB0_4:
+-	ldr	w0, [sp]
++	mov	w8, #5
++	str	w8, [sp, #8]
++	ldr	w13, [sp, #4]
++	ldr	w14, [sp, #8]
++	mov	w10, w13
++	mov	w11, w14
++	mul	w15, w10, w11
++	ldr	w16, [sp, #4]
++	ldr	w17, [sp, #8]
++	mov	w10, w16
++	mov	w11, w17
++	sdiv	w13, w10, w11
++	mov	w10, w15
++	mov	w11, w13
++	add	w14, w10, w11
++	mov	w10, w14
++	mov	w11, #10
++	add	w15, w10, w11
++	str	w15, [sp, #12]
++	ldr	w16, [sp, #12]
++	mov	w10, w16
++	mov	w11, #113
++	cmp	w10, w11
++	cset	w17, eq
++	ldr	w13, [sp, #4]
++	ldr	w14, [sp, #8]
++	mov	w10, w13
++	mov	w11, w14
++	cmp	w10, w11
++	cset	w15, gt
++	mov	w10, w17
++	mov	w11, w15
++	and	w16, w10, w11
++	mov	w10, w16
++	cmp	w10, #0
++	b.ne	.Lthen
++	b	.Lelse
++.Lthen:
++	mov	w8, #1
++	str	w8, [sp, #12]
++	b	.Lmerge
++.Lelse:
++	mov	w8, #0
++	str	w8, [sp, #12]
++	b	.Lmerge
++.Lmerge:
++	ldr	w17, [sp, #12]
++	mov	w0, w17
+ 	add	sp, sp, #16
+-	.cfi_def_cfa_offset 0
++	ldp	x29, x30, [sp], #16
+ 	ret
++	.cfi_endproc
+ .Lfunc_end0:
+ 	.size	main, .Lfunc_end0-main
+-	.cfi_endproc
+-                                        // -- End function
+-	.ident	"BiSheng Enterprise 4.2.0.2.B002 clang version 17.0.6 (2261d9fde4e0)"
+-	.section	".note.GNU-stack","",@progbits
+-	.addrsig
++

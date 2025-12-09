@@ -1,0 +1,22 @@
+; ModuleID = 'main'
+source_filename = "main"
+
+define i32 @main() {
+entry:
+  %p = alloca i32, align 4
+  store i32 1, ptr %p, align 4
+  %q = alloca i32, align 4
+  store i32 2, ptr %q, align 4
+  %r = alloca i32, align 4
+  %p1 = load i32, ptr %p, align 4
+  %q2 = load i32, ptr %q, align 4
+  %add = add i32 %p1, %q2
+  %add3 = add i32 %add, 3
+  %sub = sub i32 %add3, 1
+  store i32 %sub, ptr %r, align 4
+  %m = alloca i32, align 4
+  %r4 = load i32, ptr %r, align 4
+  store i32 %r4, ptr %m, align 4
+  %r5 = load i32, ptr %r, align 4
+  ret i32 %r5
+}

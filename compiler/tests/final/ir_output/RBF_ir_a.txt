@@ -1,0 +1,39 @@
+; ModuleID = 'main'
+source_filename = "main"
+
+define i32 @main() {
+entry:
+  %x = alloca i32, align 4
+  store i32 20, ptr %x, align 4
+  %y = alloca i32, align 4
+  store i32 5, ptr %y, align 4
+  %result = alloca i32, align 4
+  %x1 = load i32, ptr %x, align 4
+  %y2 = load i32, ptr %y, align 4
+  %mul = mul i32 %x1, %y2
+  %x3 = load i32, ptr %x, align 4
+  %y4 = load i32, ptr %y, align 4
+  %div = sdiv i32 %x3, %y4
+  %add = add i32 %mul, %div
+  %add5 = add i32 %add, 10
+  store i32 %add5, ptr %result, align 4
+  %result6 = load i32, ptr %result, align 4
+  %eq = icmp eq i32 %result6, 113
+  %x7 = load i32, ptr %x, align 4
+  %y8 = load i32, ptr %y, align 4
+  %gt = icmp sgt i32 %x7, %y8
+  %and = and i1 %eq, %gt
+  br i1 %and, label %then, label %else
+
+then:                                             ; preds = %entry
+  store i32 1, ptr %result, align 4
+  br label %merge
+
+else:                                             ; preds = %entry
+  store i32 0, ptr %result, align 4
+  br label %merge
+
+merge:                                            ; preds = %else, %then
+  %result9 = load i32, ptr %result, align 4
+  ret i32 %result9
+}

@@ -22,6 +22,23 @@ impl<'ctx> IRGenerator<'ctx> {
                 for func in functions {
                     self.generate_function(func)?;
                 }
+                // 确保所有基本块都有终止指令，避免生成不合法的 LLVM 模块
+                for function in self.builder.module.get_functions() {
+                    for bb in function.get_basic_blocks() {
+                        if bb.get_terminator().is_none() {
+                            // 将插入点移动到该基本块末尾并添加隐式返回
+                            self.builder.builder.position_at_end(bb);
+                            let func_ret = function.get_type().get_return_type();
+                            if func_ret.is_some() && func_ret.unwrap().is_int_type() {
+                                let zero = self.builder.create_int_constant(0);
+                                self.builder.build_return(Some(zero));
+                            } else {
+                                self.builder.build_return(None);
+                            }
+                        }
+                    }
+                }
+
                 Ok(self.builder.module.clone())
             }
             _ => Err("Expected Program node".to_string()),

@@ -1,5 +1,6 @@
 
 
+
 # RBRcompiler
 
 ---
@@ -17,7 +18,7 @@
    - 从终端进入 `RBRcompiler` 文件夹。
    - 输入以下命令构建镜像：
      ```bash
-     docker build --platform linux/arm64 -t my-compiler-app-3.0 .
+    docker build --platform linux/arm64 -t rbr-compiler:latest .
      ```
    - 构建完成后，输入以下命令查看现存的镜像：
      ```bash
@@ -28,21 +29,18 @@
 
 ### 1. 运行容器
 
-- 输入以下命令运行容器：
   ```bash
-  docker run -it my-compiler-app-3.0:latest /bin/bash
+ docker run --rm -it -v <这里填Dockfile所在的文件>:/app rbr-compiler:latest bash
   ```
 
 ### 2. 进入脚本文件目录
 
-- 输入以下命令进入脚本文件目录：
   ```bash
   cd tests/lexer/
   ```
 
 ### 3. 运行脚本
 
-- 由于可能出现格式问题，需要将 `.sh` 文件转换成正确的格式。执行以下命令：
   ```bash
   dos2unix ./simple_test.sh
   ```
@@ -50,11 +48,9 @@
     ```
     dos2unix: converting file ./simple_test.sh to Unix format...
     ```
-- 输入以下命令运行脚本：
   ```bash
   ./simple_test.sh
   ```
-- 最后，实验的结果会显示在终端中。
 
 ### 4. 实验 2（AST 生成）
 
@@ -68,6 +64,21 @@ dos2unix ./run_all.sh
 
 你就会在 `output` 目录下看到两个生成的文件。
 
----
 ```
+## 三、命令行（CLI）使用（简洁）
+
+
+
+参数说明（简洁）：
+
+- `FILE`：输入 C 源文件（必需）
+- `--format, -f`：tokens 输出格式，`text`（默认）或 `json`
+- `--emit <tokens|semantic>`：以 bisheng 格式导出（支持 `tokens`、`semantic`）
+- `--ast-bisheng`：配合 `--ast-output`，以 bisheng 格式输出 AST
+- `--emit-ir`：输出 IR（中间表示）
+- `--emit-arm`：输出 ARM 汇编
+- `--output, -o`：写入输出文件；不指定则打印到 stdout
+- `--ast-output`：将 AST 写入指定文件
+
+更多细节请查看 `compiler/src/main.rs`。
 

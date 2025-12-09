@@ -1,0 +1,102 @@
+Program(
+    [
+        FunctionDeclaration {
+            return_type: "int",
+            name: "main",
+            parameters: [],
+            body: Block(
+                [
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "p",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            1,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "q",
+                                    initializer: Some(
+                                        IntegerLiteral(
+                                            2,
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "r",
+                                    initializer: Some(
+                                        BinaryExpression {
+                                            operator: Subtract,
+                                            left: BinaryExpression {
+                                                operator: Add,
+                                                left: BinaryExpression {
+                                                    operator: Add,
+                                                    left: Identifier(
+                                                        "p",
+                                                    ),
+                                                    right: Identifier(
+                                                        "q",
+                                                    ),
+                                                },
+                                                right: IntegerLiteral(
+                                                    3,
+                                                ),
+                                            },
+                                            right: IntegerLiteral(
+                                                1,
+                                            ),
+                                        },
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    DeclStmt(
+                        MultiVarDecl {
+                            type_name: "int",
+                            declarations: [
+                                VariableDeclaration {
+                                    type_name: "int",
+                                    name: "m",
+                                    initializer: Some(
+                                        Identifier(
+                                            "r",
+                                        ),
+                                    ),
+                                },
+                            ],
+                        },
+                    ),
+                    ReturnStatement(
+                        Some(
+                            Identifier(
+                                "r",
+                            ),
+                        ),
+                    ),
+                ],
+            ),
+        },
+    ],
+)

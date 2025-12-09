@@ -1,0 +1,188 @@
+TranslationUnitDecl 0x400000c77258 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x400000c78100 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x400000c77820 '__int128'
+|-TypedefDecl 0x400000c78170 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x400000c77840 'unsigned __int128'
+|-TypedefDecl 0x400000d22b28 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x400000d22900 'struct __NSConstantString_tag'
+|   `-Record 0x400000c781c8 '__NSConstantString_tag'
+|-TypedefDecl 0x400000d22b90 <<invalid sloc>> <invalid sloc> implicit __SVInt8_t '__SVInt8_t'
+| `-BuiltinType 0x400000c779e0 '__SVInt8_t'
+|-TypedefDecl 0x400000d22bf8 <<invalid sloc>> <invalid sloc> implicit __SVInt16_t '__SVInt16_t'
+| `-BuiltinType 0x400000c77a00 '__SVInt16_t'
+|-TypedefDecl 0x400000d22c60 <<invalid sloc>> <invalid sloc> implicit __SVInt32_t '__SVInt32_t'
+| `-BuiltinType 0x400000c77a20 '__SVInt32_t'
+|-TypedefDecl 0x400000d22cc8 <<invalid sloc>> <invalid sloc> implicit __SVInt64_t '__SVInt64_t'
+| `-BuiltinType 0x400000c77a40 '__SVInt64_t'
+|-TypedefDecl 0x400000d22d30 <<invalid sloc>> <invalid sloc> implicit __SVUint8_t '__SVUint8_t'
+| `-BuiltinType 0x400000c77a60 '__SVUint8_t'
+|-TypedefDecl 0x400000d22d98 <<invalid sloc>> <invalid sloc> implicit __SVUint16_t '__SVUint16_t'
+| `-BuiltinType 0x400000c77a80 '__SVUint16_t'
+|-TypedefDecl 0x400000d22e00 <<invalid sloc>> <invalid sloc> implicit __SVUint32_t '__SVUint32_t'
+| `-BuiltinType 0x400000c77aa0 '__SVUint32_t'
+|-TypedefDecl 0x400000d22e68 <<invalid sloc>> <invalid sloc> implicit __SVUint64_t '__SVUint64_t'
+| `-BuiltinType 0x400000c77ac0 '__SVUint64_t'
+|-TypedefDecl 0x400000d22ed0 <<invalid sloc>> <invalid sloc> implicit __SVFloat16_t '__SVFloat16_t'
+| `-BuiltinType 0x400000c77ae0 '__SVFloat16_t'
+|-TypedefDecl 0x400000d22f38 <<invalid sloc>> <invalid sloc> implicit __SVFloat32_t '__SVFloat32_t'
+| `-BuiltinType 0x400000c77b00 '__SVFloat32_t'
+|-TypedefDecl 0x400000d22fa0 <<invalid sloc>> <invalid sloc> implicit __SVFloat64_t '__SVFloat64_t'
+| `-BuiltinType 0x400000c77b20 '__SVFloat64_t'
+|-TypedefDecl 0x400000d23008 <<invalid sloc>> <invalid sloc> implicit __SVBFloat16_t '__SVBFloat16_t'
+| `-BuiltinType 0x400000c77b40 '__SVBFloat16_t'
+|-TypedefDecl 0x400000d23070 <<invalid sloc>> <invalid sloc> implicit __clang_svint8x2_t '__clang_svint8x2_t'
+| `-BuiltinType 0x400000c77b60 '__clang_svint8x2_t'
+|-TypedefDecl 0x400000d230d8 <<invalid sloc>> <invalid sloc> implicit __clang_svint16x2_t '__clang_svint16x2_t'
+| `-BuiltinType 0x400000c77b80 '__clang_svint16x2_t'
+|-TypedefDecl 0x400000d23140 <<invalid sloc>> <invalid sloc> implicit __clang_svint32x2_t '__clang_svint32x2_t'
+| `-BuiltinType 0x400000c77ba0 '__clang_svint32x2_t'
+|-TypedefDecl 0x400000d231a8 <<invalid sloc>> <invalid sloc> implicit __clang_svint64x2_t '__clang_svint64x2_t'
+| `-BuiltinType 0x400000c77bc0 '__clang_svint64x2_t'
+|-TypedefDecl 0x400000d23210 <<invalid sloc>> <invalid sloc> implicit __clang_svuint8x2_t '__clang_svuint8x2_t'
+| `-BuiltinType 0x400000c77be0 '__clang_svuint8x2_t'
+|-TypedefDecl 0x400000d23278 <<invalid sloc>> <invalid sloc> implicit __clang_svuint16x2_t '__clang_svuint16x2_t'
+| `-BuiltinType 0x400000c77c00 '__clang_svuint16x2_t'
+|-TypedefDecl 0x400000d232e0 <<invalid sloc>> <invalid sloc> implicit __clang_svuint32x2_t '__clang_svuint32x2_t'
+| `-BuiltinType 0x400000c77c20 '__clang_svuint32x2_t'
+|-TypedefDecl 0x400000d23348 <<invalid sloc>> <invalid sloc> implicit __clang_svuint64x2_t '__clang_svuint64x2_t'
+| `-BuiltinType 0x400000c77c40 '__clang_svuint64x2_t'
+|-TypedefDecl 0x400000d233b0 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat16x2_t '__clang_svfloat16x2_t'
+| `-BuiltinType 0x400000c77c60 '__clang_svfloat16x2_t'
+|-TypedefDecl 0x400000d23418 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat32x2_t '__clang_svfloat32x2_t'
+| `-BuiltinType 0x400000c77c80 '__clang_svfloat32x2_t'
+|-TypedefDecl 0x400000d23480 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat64x2_t '__clang_svfloat64x2_t'
+| `-BuiltinType 0x400000c77ca0 '__clang_svfloat64x2_t'
+|-TypedefDecl 0x400000d234e8 <<invalid sloc>> <invalid sloc> implicit __clang_svbfloat16x2_t '__clang_svbfloat16x2_t'
+| `-BuiltinType 0x400000c77cc0 '__clang_svbfloat16x2_t'
+|-TypedefDecl 0x400000d23550 <<invalid sloc>> <invalid sloc> implicit __clang_svint8x3_t '__clang_svint8x3_t'
+| `-BuiltinType 0x400000c77ce0 '__clang_svint8x3_t'
+|-TypedefDecl 0x400000d235b8 <<invalid sloc>> <invalid sloc> implicit __clang_svint16x3_t '__clang_svint16x3_t'
+| `-BuiltinType 0x400000c77d00 '__clang_svint16x3_t'
+|-TypedefDecl 0x400000d23620 <<invalid sloc>> <invalid sloc> implicit __clang_svint32x3_t '__clang_svint32x3_t'
+| `-BuiltinType 0x400000c77d20 '__clang_svint32x3_t'
+|-TypedefDecl 0x400000d23688 <<invalid sloc>> <invalid sloc> implicit __clang_svint64x3_t '__clang_svint64x3_t'
+| `-BuiltinType 0x400000c77d40 '__clang_svint64x3_t'
+|-TypedefDecl 0x400000d236f0 <<invalid sloc>> <invalid sloc> implicit __clang_svuint8x3_t '__clang_svuint8x3_t'
+| `-BuiltinType 0x400000c77d60 '__clang_svuint8x3_t'
+|-TypedefDecl 0x400000d23758 <<invalid sloc>> <invalid sloc> implicit __clang_svuint16x3_t '__clang_svuint16x3_t'
+| `-BuiltinType 0x400000c77d80 '__clang_svuint16x3_t'
+|-TypedefDecl 0x400000d237c0 <<invalid sloc>> <invalid sloc> implicit __clang_svuint32x3_t '__clang_svuint32x3_t'
+| `-BuiltinType 0x400000c77da0 '__clang_svuint32x3_t'
+|-TypedefDecl 0x400000d23828 <<invalid sloc>> <invalid sloc> implicit __clang_svuint64x3_t '__clang_svuint64x3_t'
+| `-BuiltinType 0x400000c77dc0 '__clang_svuint64x3_t'
+|-TypedefDecl 0x400000d23890 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat16x3_t '__clang_svfloat16x3_t'
+| `-BuiltinType 0x400000c77de0 '__clang_svfloat16x3_t'
+|-TypedefDecl 0x400000d24130 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat32x3_t '__clang_svfloat32x3_t'
+| `-BuiltinType 0x400000c77e00 '__clang_svfloat32x3_t'
+|-TypedefDecl 0x400000d24198 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat64x3_t '__clang_svfloat64x3_t'
+| `-BuiltinType 0x400000c77e20 '__clang_svfloat64x3_t'
+|-TypedefDecl 0x400000d24200 <<invalid sloc>> <invalid sloc> implicit __clang_svbfloat16x3_t '__clang_svbfloat16x3_t'
+| `-BuiltinType 0x400000c77e40 '__clang_svbfloat16x3_t'
+|-TypedefDecl 0x400000d24268 <<invalid sloc>> <invalid sloc> implicit __clang_svint8x4_t '__clang_svint8x4_t'
+| `-BuiltinType 0x400000c77e60 '__clang_svint8x4_t'
+|-TypedefDecl 0x400000d242d0 <<invalid sloc>> <invalid sloc> implicit __clang_svint16x4_t '__clang_svint16x4_t'
+| `-BuiltinType 0x400000c77e80 '__clang_svint16x4_t'
+|-TypedefDecl 0x400000d24338 <<invalid sloc>> <invalid sloc> implicit __clang_svint32x4_t '__clang_svint32x4_t'
+| `-BuiltinType 0x400000c77ea0 '__clang_svint32x4_t'
+|-TypedefDecl 0x400000d243a0 <<invalid sloc>> <invalid sloc> implicit __clang_svint64x4_t '__clang_svint64x4_t'
+| `-BuiltinType 0x400000c77ec0 '__clang_svint64x4_t'
+|-TypedefDecl 0x400000d24408 <<invalid sloc>> <invalid sloc> implicit __clang_svuint8x4_t '__clang_svuint8x4_t'
+| `-BuiltinType 0x400000c77ee0 '__clang_svuint8x4_t'
+|-TypedefDecl 0x400000d24470 <<invalid sloc>> <invalid sloc> implicit __clang_svuint16x4_t '__clang_svuint16x4_t'
+| `-BuiltinType 0x400000c77f00 '__clang_svuint16x4_t'
+|-TypedefDecl 0x400000d244d8 <<invalid sloc>> <invalid sloc> implicit __clang_svuint32x4_t '__clang_svuint32x4_t'
+| `-BuiltinType 0x400000c77f20 '__clang_svuint32x4_t'
+|-TypedefDecl 0x400000d24540 <<invalid sloc>> <invalid sloc> implicit __clang_svuint64x4_t '__clang_svuint64x4_t'
+| `-BuiltinType 0x400000c77f40 '__clang_svuint64x4_t'
+|-TypedefDecl 0x400000d245a8 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat16x4_t '__clang_svfloat16x4_t'
+| `-BuiltinType 0x400000c77f60 '__clang_svfloat16x4_t'
+|-TypedefDecl 0x400000d24610 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat32x4_t '__clang_svfloat32x4_t'
+| `-BuiltinType 0x400000c77f80 '__clang_svfloat32x4_t'
+|-TypedefDecl 0x400000d24678 <<invalid sloc>> <invalid sloc> implicit __clang_svfloat64x4_t '__clang_svfloat64x4_t'
+| `-BuiltinType 0x400000c77fa0 '__clang_svfloat64x4_t'
+|-TypedefDecl 0x400000d246e0 <<invalid sloc>> <invalid sloc> implicit __clang_svbfloat16x4_t '__clang_svbfloat16x4_t'
+| `-BuiltinType 0x400000c77fc0 '__clang_svbfloat16x4_t'
+|-TypedefDecl 0x400000d24748 <<invalid sloc>> <invalid sloc> implicit __SVBool_t '__SVBool_t'
+| `-BuiltinType 0x400000c77fe0 '__SVBool_t'
+|-TypedefDecl 0x400000d247b0 <<invalid sloc>> <invalid sloc> implicit __clang_svboolx2_t '__clang_svboolx2_t'
+| `-BuiltinType 0x400000c78000 '__clang_svboolx2_t'
+|-TypedefDecl 0x400000d24818 <<invalid sloc>> <invalid sloc> implicit __clang_svboolx4_t '__clang_svboolx4_t'
+| `-BuiltinType 0x400000c78020 '__clang_svboolx4_t'
+|-TypedefDecl 0x400000d24880 <<invalid sloc>> <invalid sloc> implicit __SVCount_t '__SVCount_t'
+| `-BuiltinType 0x400000c78040 '__SVCount_t'
+|-TypedefDecl 0x400000d24920 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x400000d248e0 'char *'
+|   `-BuiltinType 0x400000c77300 'char'
+|-TypedefDecl 0x400000d24c18 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list'
+| `-RecordType 0x400000d24a00 'struct __va_list'
+|   `-Record 0x400000d24978 '__va_list'
+|-FunctionDecl 0x400000d24de0 </app/compiler/tests/final/a+.c:1:1, line:3:1> line:1:5 used add 'int (int, int)'
+| |-ParmVarDecl 0x400000d24c88 <col:9, col:13> col:13 used a 'int'
+| |-ParmVarDecl 0x400000d24d08 <col:16, col:20> col:20 used b 'int'
+| `-CompoundStmt 0x400000d24f80 <col:23, line:3:1>
+|   `-ReturnStmt 0x400000d24f70 <line:2:5, col:16>
+|     `-BinaryOperator 0x400000d24f50 <col:12, col:16> 'int' '+'
+|       |-ImplicitCastExpr 0x400000d24f20 <col:12> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x400000d24ee0 <col:12> 'int' lvalue ParmVar 0x400000d24c88 'a' 'int'
+|       `-ImplicitCastExpr 0x400000d24f38 <col:16> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x400000d24f00 <col:16> 'int' lvalue ParmVar 0x400000d24d08 'b' 'int'
+|-FunctionDecl 0x400000d3bbb0 <line:4:1, line:6:1> line:4:5 used multiply 'int (int, int)'
+| |-ParmVarDecl 0x400000d24fb0 <col:14, col:18> col:18 used a 'int'
+| |-ParmVarDecl 0x400000d25030 <col:21, col:25> col:25 used b 'int'
+| `-CompoundStmt 0x400000d3bd08 <col:28, line:6:1>
+|   `-ReturnStmt 0x400000d3bcf8 <line:5:5, col:16>
+|     `-BinaryOperator 0x400000d3bcd8 <col:12, col:16> 'int' '*'
+|       |-ImplicitCastExpr 0x400000d3bca8 <col:12> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x400000d3bc68 <col:12> 'int' lvalue ParmVar 0x400000d24fb0 'a' 'int'
+|       `-ImplicitCastExpr 0x400000d3bcc0 <col:16> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x400000d3bc88 <col:16> 'int' lvalue ParmVar 0x400000d25030 'b' 'int'
+`-FunctionDecl 0x400000d3bd70 <line:7:1, line:21:1> line:7:5 main 'int ()'
+  `-CompoundStmt 0x400000d3c548 <col:13, line:21:1>
+    |-DeclStmt 0x400000d3beb8 <line:8:5, col:15>
+    | `-VarDecl 0x400000d3be30 <col:5, col:13> col:9 used x 'int' cinit
+    |   `-IntegerLiteral 0x400000d3be98 <col:13> 'int' 10
+    |-DeclStmt 0x400000d3bf70 <line:9:5, col:15>
+    | `-VarDecl 0x400000d3bee8 <col:5, col:13> col:9 used y 'int' cinit
+    |   `-IntegerLiteral 0x400000d3bf50 <col:13> 'int' 20
+    |-DeclStmt 0x400000d3c118 <line:10:5, col:24>
+    | `-VarDecl 0x400000d3bfa0 <col:5, col:23> col:9 used sum 'int' cinit
+    |   `-CallExpr 0x400000d3c0b0 <col:15, col:23> 'int'
+    |     |-ImplicitCastExpr 0x400000d3c098 <col:15> 'int (*)(int, int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x400000d3c008 <col:15> 'int (int, int)' Function 0x400000d24de0 'add' 'int (int, int)'
+    |     |-ImplicitCastExpr 0x400000d3c0e8 <col:19> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x400000d3c028 <col:19> 'int' lvalue Var 0x400000d3be30 'x' 'int'
+    |     `-ImplicitCastExpr 0x400000d3c100 <col:22> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x400000d3c048 <col:22> 'int' lvalue Var 0x400000d3bee8 'y' 'int'
+    |-DeclStmt 0x400000d3c290 <line:11:5, col:33>
+    | `-VarDecl 0x400000d3c148 <col:5, col:32> col:9 used product 'int' cinit
+    |   `-CallExpr 0x400000d3c228 <col:19, col:32> 'int'
+    |     |-ImplicitCastExpr 0x400000d3c210 <col:19> 'int (*)(int, int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x400000d3c1b0 <col:19> 'int (int, int)' Function 0x400000d3bbb0 'multiply' 'int (int, int)'
+    |     |-ImplicitCastExpr 0x400000d3c260 <col:28> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x400000d3c1d0 <col:28> 'int' lvalue Var 0x400000d3be30 'x' 'int'
+    |     `-ImplicitCastExpr 0x400000d3c278 <col:31> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x400000d3c1f0 <col:31> 'int' lvalue Var 0x400000d3bee8 'y' 'int'
+    `-IfStmt 0x400000d3c518 <line:12:5, line:20:5> has_else
+      |-BinaryOperator 0x400000d3c420 <line:12:8, col:31> 'int' '&&'
+      | |-UnaryOperator 0x400000d3c358 <col:8, col:13> 'int' prefix '!' cannot overflow
+      | | `-ParenExpr 0x400000d3c338 <col:9, col:13> 'int'
+      | |   `-BinaryOperator 0x400000d3c318 <col:10, col:12> 'int' '>'
+      | |     |-ImplicitCastExpr 0x400000d3c2e8 <col:10> 'int' <LValueToRValue>
+      | |     | `-DeclRefExpr 0x400000d3c2a8 <col:10> 'int' lvalue Var 0x400000d3be30 'x' 'int'
+      | |     `-ImplicitCastExpr 0x400000d3c300 <col:12> 'int' <LValueToRValue>
+      | |       `-DeclRefExpr 0x400000d3c2c8 <col:12> 'int' lvalue Var 0x400000d3bee8 'y' 'int'
+      | `-ParenExpr 0x400000d3c400 <col:17, col:31> 'int'
+      |   `-BinaryOperator 0x400000d3c3e0 <col:18, col:24> 'int' '>'
+      |     |-ImplicitCastExpr 0x400000d3c3b0 <col:18> 'int' <LValueToRValue>
+      |     | `-DeclRefExpr 0x400000d3c370 <col:18> 'int' lvalue Var 0x400000d3bfa0 'sum' 'int'
+      |     `-ImplicitCastExpr 0x400000d3c3c8 <col:24> 'int' <LValueToRValue>
+      |       `-DeclRefExpr 0x400000d3c390 <col:24> 'int' lvalue Var 0x400000d3c148 'product' 'int'
+      |-CompoundStmt 0x400000d3c488 <line:13:5, line:15:5>
+      | `-ReturnStmt 0x400000d3c478 <line:14:9, col:16>
+      |   `-ImplicitCastExpr 0x400000d3c460 <col:16> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x400000d3c440 <col:16> 'int' lvalue Var 0x400000d3bfa0 'sum' 'int'
+      `-CompoundStmt 0x400000d3c500 <line:18:5, line:20:5>
+        `-ReturnStmt 0x400000d3c4f0 <line:19:9, col:17>
+          `-UnaryOperator 0x400000d3c4d8 <col:16, col:17> 'int' prefix '-'
+            `-ImplicitCastExpr 0x400000d3c4c0 <col:17> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x400000d3c4a0 <col:17> 'int' lvalue Var 0x400000d3c148 'product' 'int'
